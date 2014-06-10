@@ -11,29 +11,17 @@
     class GameFifteenEngine
     {
         private const string EmptyCellValue = " ";
-
         private const int MatrixSizeRows = 4;
-
         private const int MatrixSizeColumns = 4;
-
         private const int TopScoresAmount = 5;
-
         private const string TopScoresFileName = "Top.txt";
-
         private const string TopScoresPersonPattern = @"^\d+\. (.+) --> (\d+) moves?$";
-
         private static readonly int[] DirectionRow = { -1, 0, 1, 0 };
-
         private static readonly int[] DirectionColumn = { 0, 1, 0, -1 };
-
         private static int emptyCellRow;
-
         private static int emptyCellColumn;
-
         private static string[,] matrix;
-
         private static Random random = new Random();
-
         private static int turn;
 
         private static int CellNumberToDirection(int cellNumber)
@@ -41,7 +29,7 @@
             int direction = -1;
             for (int dir = 0; dir < DirectionRow.Length; dir++)
             {
-                bool isDirValid = proverka(dir);
+                bool isDirValid = CheckIfCellIsValid(dir);
 
                 if (isDirValid)
                 {
@@ -105,73 +93,6 @@
             }
         }
 
-        private static void InitializeMatrix()
-        {
-            matrix = new string[MatrixSizeRows, MatrixSizeColumns];
-            int cellValue = 1;
-
-            for (int row = 0; row < MatrixSizeRows; row++)
-            {
-                for (int column = 0; column < MatrixSizeColumns; column++)
-                {
-                    matrix[row, column] = cellValue.ToString();
-                    cellValue++;
-                }
-            }
-
-            emptyCellRow = MatrixSizeRows - 1;
-            emptyCellColumn = MatrixSizeColumns - 1;
-            matrix[emptyCellRow, emptyCellColumn] = EmptyCellValue;
-        }
-
-        private static bool proverka(int direction)
-        {
-            int nextCellRow = emptyCellRow + DirectionRow[direction];
-            bool isRowValid = (nextCellRow >= 0 && nextCellRow < MatrixSizeRows);
-            int nextCellColumn = emptyCellColumn + DirectionColumn[direction];
-            bool isColumnValid = (nextCellColumn >= 0 && nextCellColumn < MatrixSizeColumns);
-            bool isCellValid = isRowValid && isColumnValid;
-
-            return isCellValid;
-        }
-
-        private static bool proverka2()
-        {
-            bool isEmptyCellInPlace = (emptyCellRow == MatrixSizeRows - 1) && (emptyCellColumn == MatrixSizeColumns - 1);
-            if (!isEmptyCellInPlace)
-            {
-                return false;
-            }
-
-            int cellValue = 1;
-            int matrixSize = MatrixSizeRows * MatrixSizeColumns;
-            for (int row = 0; row < MatrixSizeRows; row++)
-            {
-                for (int column = 0; column < MatrixSizeColumns && cellValue < matrixSize; column++)
-                {
-                    if (matrix[row, column] != cellValue.ToString())
-                    {
-                        return false;
-                    }
-
-                    cellValue++;
-                }
-            }
-
-            return true;
-        }
-
-        private static void MoveCell(int direction)
-        {
-            int nextCellRow = emptyCellRow + DirectionRow[direction];
-            int nextCellColumn = emptyCellColumn + DirectionColumn[direction];
-            matrix[emptyCellRow, emptyCellColumn] = matrix[nextCellRow, nextCellColumn];
-            matrix[nextCellRow, nextCellColumn] = EmptyCellValue;
-            emptyCellRow = nextCellRow;
-            emptyCellColumn = nextCellColumn;
-            turn++;
-        }
-
         private static void NextMove(int cellNumber)
         {
             int matrixSize = MatrixSizeRows * MatrixSizeColumns;
@@ -190,54 +111,6 @@
 
             MoveCell(direction);
             PrintMatrix();
-        }
-
-        public static void PlayGame()
-        {
-            while (true)
-            {
-                InitializeMatrix();
-                ShuffleMatrix();
-                turn = 0;
-                PrintWelcomeMessage();
-                PrintMatrix();
-                while (true)
-                {
-                    PrintNextMoveMessage();
-                    string consoleInputLine = Console.ReadLine();
-                    int cellNumber;
-                    if (int.TryParse(consoleInputLine, out cellNumber))
-                    {
-                        //Input is a cell number.
-                        NextMove(cellNumber);
-                        if (proverka2())
-                        {
-                            TheEnd();
-                            break;
-                        }
-                    }
-                    else
-                    {
-                        //Input is a command.
-                        if (consoleInputLine == "restart")
-                        {
-                            break;
-                        }
-                        switch (consoleInputLine)
-                        {
-                            case "top":
-                                PrintTopScores();
-                                break;
-                            case "exit":
-                                PrintGoodbye();
-                                return;
-                            default:
-                                PrintIllegalCommandMessage();
-                                break;
-                        }
-                    }
-                }
-            }
         }
 
         private static void PrintCellDoesNotExistMessage()
@@ -316,25 +189,6 @@
                               "'restart' to start a new game and 'exit'  to quit the game.");
         }
 
-        private static void ShuffleMatrix()
-        {
-            int matrixSize = MatrixSizeRows * MatrixSizeColumns;
-            int shuffles = random.Next(matrixSize, matrixSize * 100);
-            for (int i = 0; i < shuffles; i++)
-            {
-                int direction = random.Next(DirectionRow.Length);
-                if (proverka(direction))
-                {
-                    MoveCell(direction);
-                }
-            }
-
-            if (proverka2())
-            {
-                ShuffleMatrix();
-            }
-        }
-
         private static void UpgradeTopScore()
         {
             string[] topScores = GetTopScoresFromFile();
@@ -399,6 +253,140 @@
             }
 
             return topScoresPairs;
+        }
+
+        private static bool CheckIfInGoodOrder() //proverka2
+        {
+            bool isEmptyCellInPlace = (emptyCellRow == MatrixSizeRows - 1) && (emptyCellColumn == MatrixSizeColumns - 1);
+            if (!isEmptyCellInPlace)
+            {
+                return false;
+            }
+
+            int cellValue = 1;
+            int matrixSize = MatrixSizeRows * MatrixSizeColumns;
+            for (int row = 0; row < MatrixSizeRows; row++)
+            {
+                for (int column = 0; column < MatrixSizeColumns && cellValue < matrixSize; column++)
+                {
+                    if (matrix[row, column] != cellValue.ToString())
+                    {
+                        return false;
+                    }
+
+                    cellValue++;
+                }
+            }
+
+            return true;
+        }
+
+        private static bool CheckIfCellIsValid(int direction) //proverka
+        {
+            int nextCellRow = emptyCellRow + DirectionRow[direction];
+            bool isRowValid = (nextCellRow >= 0 && nextCellRow < MatrixSizeRows);
+            int nextCellColumn = emptyCellColumn + DirectionColumn[direction];
+            bool isColumnValid = (nextCellColumn >= 0 && nextCellColumn < MatrixSizeColumns);
+            bool isCellValid = isRowValid && isColumnValid;
+
+            return isCellValid;
+        }
+
+        private static void MoveCell(int direction)
+        {
+            int nextCellRow = emptyCellRow + DirectionRow[direction];
+            int nextCellColumn = emptyCellColumn + DirectionColumn[direction];
+            matrix[emptyCellRow, emptyCellColumn] = matrix[nextCellRow, nextCellColumn];
+            matrix[nextCellRow, nextCellColumn] = EmptyCellValue;
+            emptyCellRow = nextCellRow;
+            emptyCellColumn = nextCellColumn;
+            turn++;
+        }
+
+        private static void ShuffleMatrix()
+        {
+            int matrixSize = MatrixSizeRows * MatrixSizeColumns;
+            int shuffles = random.Next(matrixSize, matrixSize * 100);
+            for (int i = 0; i < shuffles; i++)
+            {
+                int direction = random.Next(DirectionRow.Length);
+                if (CheckIfCellIsValid(direction))
+                {
+                    MoveCell(direction);
+                }
+            }
+
+            if (CheckIfInGoodOrder())
+            {
+                ShuffleMatrix();
+            }
+        }
+
+        private static void InitializeMatrix()
+        {
+            matrix = new string[MatrixSizeRows, MatrixSizeColumns];
+            int cellValue = 1;
+
+            for (int row = 0; row < MatrixSizeRows; row++)
+            {
+                for (int column = 0; column < MatrixSizeColumns; column++)
+                {
+                    matrix[row, column] = cellValue.ToString();
+                    cellValue++;
+                }
+            }
+
+            emptyCellRow = MatrixSizeRows - 1;
+            emptyCellColumn = MatrixSizeColumns - 1;
+            matrix[emptyCellRow, emptyCellColumn] = EmptyCellValue;
+        }
+
+        public static void PlayGame()
+        {
+            while (true)
+            {
+                InitializeMatrix();
+                ShuffleMatrix();
+                turn = 0;
+                PrintWelcomeMessage();
+                PrintMatrix();
+                while (true)
+                {
+                    PrintNextMoveMessage();
+                    string consoleInputLine = Console.ReadLine();
+                    int cellNumber;
+                    if (int.TryParse(consoleInputLine, out cellNumber))
+                    {
+                        //Input is a cell number.
+                        NextMove(cellNumber);
+                        if (CheckIfInGoodOrder())
+                        {
+                            TheEnd();
+                            break;
+                        }
+                    }
+                    else
+                    {
+                        //Input is a command.
+                        if (consoleInputLine == "restart")
+                        {
+                            break;
+                        }
+                        switch (consoleInputLine)
+                        {
+                            case "top":
+                                PrintTopScores();
+                                break;
+                            case "exit":
+                                PrintGoodbye();
+                                return;
+                            default:
+                                PrintIllegalCommandMessage();
+                                break;
+                        }
+                    }
+                }
+            }
         }
 
         static void Main()

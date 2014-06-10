@@ -4,43 +4,41 @@
 
     class HighScore
     {
-        private string name;
-        private int score;
+        private string userName;
+        private int userScore;
 
         public HighScore(string name, int score)
         {
-            this.Name = name;
-            this.Score = score;
+            this.UserName = name;
+            this.UserScore = score;
         }
 
-        public string Name
+        public string UserName
         {
             get
             {
-                return this.name;
+                return this.userName;
             }
 
             set
             {
                 // TODO: IMPLEMENT DATA VALIDATION
-                this.name = value;
+                this.userName = value;
             }
         }
 
-        public int Score
+        public int UserScore
         {
             get
             {
-                return this.score;
+                return this.userScore;
             }
 
             set
             {
                 //TODO: IMPLEMENT DATA VALIDATION
-                this.score = value;
+                this.userScore = value;
             }
         }
     }
 }
-
-//test!
