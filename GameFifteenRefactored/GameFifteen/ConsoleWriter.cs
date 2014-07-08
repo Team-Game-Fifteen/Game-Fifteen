@@ -1,12 +1,11 @@
-﻿using System;
-using System.Linq;
-using System.Text;
-
-namespace GameFifteen
+﻿namespace GameFifteen
 {
+    using System;
+    using System.Linq;
+    using System.Text;
+
     public static class ConsoleWriter
     {
-
         public static void PrintCellDoesNotExistMessage()
         {
             Console.WriteLine("That cell does not exist in the matrix.");
@@ -39,6 +38,7 @@ namespace GameFifteen
             {
                 horizontalBorder.Append("---");
             }
+
             horizontalBorder.Append("- ");
             Console.WriteLine(horizontalBorder);
             for (int row = 0; row < GameBoard.MatrixSizeRows; row++)

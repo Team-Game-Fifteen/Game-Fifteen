@@ -2,7 +2,7 @@
 {
     using System;
 
-    struct PersonalScore
+    public struct PersonalScore
     {
         private string userName;
         private int userScore;

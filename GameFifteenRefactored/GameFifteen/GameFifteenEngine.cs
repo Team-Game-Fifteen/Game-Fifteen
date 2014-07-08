@@ -8,9 +8,9 @@
     using System.Text.RegularExpressions;
     using System.Threading.Tasks;
 
-    class GameFifteenEngine
+    public class GameFifteenEngine
     {
-        static void Main()
+        public static void Main()
         {
             PlayGame();
         }
@@ -33,7 +33,7 @@
                     {
                         //Input is a cell number.
                         board.NextMove(cellNumber);
-                        if (board.CheckIfInGoodOrder())
+                        if (board.IsMatrixOrdered())
                         {
                             TheEnd(board);
                             break;
@@ -46,6 +46,7 @@
                         {
                             break;
                         }
+
                         switch (consoleInputLine)
                         {
                             case "top":
@@ -77,6 +78,7 @@
                     return;
                 }
             }
+
             Score.UpgradeTopScore(board);
         }
     }

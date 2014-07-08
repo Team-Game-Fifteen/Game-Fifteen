@@ -5,7 +5,7 @@
     using System.Linq;
     using System.Text.RegularExpressions;
 
-    class Score
+    public class Score
     {
         public const int TopScoresAmount = 5;
         public const string TopScoresFileName = "Top.txt";
@@ -47,6 +47,7 @@
                         line++;
                     }
                 }
+
                 return topScores;
             }
             catch (FileNotFoundException)
@@ -54,8 +55,9 @@
                 StreamWriter topWriter = new StreamWriter(TopScoresFileName);
                 using (topWriter)
                 {
-                    topWriter.Write("");
+                    topWriter.Write(string.Empty);
                 }
+
                 return new string[TopScoresAmount];
             }
         }
@@ -104,7 +106,5 @@
 
             return topScoresPairs;
         }
-
-
     }
 }
