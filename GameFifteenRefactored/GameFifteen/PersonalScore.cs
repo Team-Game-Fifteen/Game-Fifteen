@@ -23,7 +23,11 @@
 
             set
             {
-                // TODO: IMPLEMENT DATA VALIDATION
+                if (value == string.Empty)
+                {
+                    value = "Anonymous";
+                }
+
                 this.userName = value;
             }
         }
@@ -37,7 +41,6 @@
 
             set
             {
-                //TODO: IMPLEMENT DATA VALIDATION
                 this.userScore = value;
             }
         }

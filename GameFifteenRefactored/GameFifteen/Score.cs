@@ -16,10 +16,10 @@
             string[] topScores = GetTopScoresFromFile();
             Console.Write("Please enter your name for the top scoreboard: ");
             string name = Console.ReadLine();
-            if (name == string.Empty)
-            {
-                name = "Anonymous";
-            }
+            //if (name == string.Empty) //Moved to PersonalScore.cs
+            //{
+            //    name = "Anonymous";
+            //}
 
             topScores[TopScoresAmount] = string.Format("0. {0} --> {1} move", name, board.Turn);
             Array.Sort(topScores);
