@@ -18,9 +18,7 @@
 
         private Random random = new Random();
         private int turn;
-
-        private string[,] matrix;
-
+        
         public GameBoard()
         {
             this.InitializeMatrix();

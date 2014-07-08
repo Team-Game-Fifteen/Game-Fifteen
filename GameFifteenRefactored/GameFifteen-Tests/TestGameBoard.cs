@@ -94,5 +94,25 @@ namespace GameFifteen_Tests
 
             Assert.IsTrue(equalMatrices);
         }
+
+        [Test]
+        public void TestIsMatrixOrdered()
+        {
+            GameBoard testBoard = new GameBoard();
+
+            bool isMatrixOrdered = testBoard.IsMatrixOrdered();
+            Assert.IsTrue(isMatrixOrdered);
+        }
+
+        [Test]
+        public void TestCheckIfCellIsValid()
+        {
+            GameBoard testBoard = new GameBoard();
+
+            int direction = 3;
+            bool cellIsValid = testBoard.CheckIfCellIsValid(direction);
+
+            Assert.IsTrue(cellIsValid);
+        }        
     }
 }
