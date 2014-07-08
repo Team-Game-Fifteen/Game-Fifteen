@@ -31,6 +31,7 @@
 
             UpgradeTopScoreInFile(sortedScores);
         }
+
         public static string[] GetTopScoresFromFile()
         {
             try
@@ -50,8 +51,7 @@
             }
             catch (FileNotFoundException)
             {
-                StreamWriter topWriter =
-                    new StreamWriter(TopScoresFileName);
+                StreamWriter topWriter = new StreamWriter(TopScoresFileName);
                 using (topWriter)
                 {
                     topWriter.Write("");
@@ -59,6 +59,7 @@
                 return new string[TopScoresAmount];
             }
         }
+
         private static void UpgradeTopScoreInFile(IOrderedEnumerable<PersonalScore> sortedScores)
         {
             StreamWriter topWriter = new StreamWriter(TopScoresFileName);

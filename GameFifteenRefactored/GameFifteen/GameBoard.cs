@@ -82,21 +82,21 @@ namespace GameFifteen
 
         private void InitializeMatrix()
         {
-            matrix = new string[MatrixSizeRows, MatrixSizeColumns];
+            this.Matrix = new string[MatrixSizeRows, MatrixSizeColumns];
             int cellValue = 1;
 
             for (int row = 0; row < MatrixSizeRows; row++)
             {
                 for (int column = 0; column < MatrixSizeColumns; column++)
                 {
-                    matrix[row, column] = cellValue.ToString();
+                    Matrix[row, column] = cellValue.ToString();
                     cellValue++;
                 }
             }
 
             emptyCellRow = MatrixSizeRows - 1;
             emptyCellColumn = MatrixSizeColumns - 1;
-            matrix[emptyCellRow, emptyCellColumn] = EmptyCellValue;
+            Matrix[emptyCellRow, emptyCellColumn] = EmptyCellValue;
         }
 
         public bool CheckIfInGoodOrder()
@@ -113,7 +113,7 @@ namespace GameFifteen
             {
                 for (int column = 0; column < MatrixSizeColumns && cellValue < matrixSize; column++)
                 {
-                    if (matrix[row, column] != cellValue.ToString())
+                    if (Matrix[row, column] != cellValue.ToString())
                     {
                         return false;
                     }
@@ -129,8 +129,8 @@ namespace GameFifteen
         {
             int nextCellRow = emptyCellRow + DirectionRow[direction];
             int nextCellColumn = emptyCellColumn + DirectionColumn[direction];
-            matrix[emptyCellRow, emptyCellColumn] = matrix[nextCellRow, nextCellColumn];
-            matrix[nextCellRow, nextCellColumn] = EmptyCellValue;
+            Matrix[emptyCellRow, emptyCellColumn] = Matrix[nextCellRow, nextCellColumn];
+            Matrix[nextCellRow, nextCellColumn] = EmptyCellValue;
             emptyCellRow = nextCellRow;
             emptyCellColumn = nextCellColumn;
             turn++;
@@ -148,7 +148,7 @@ namespace GameFifteen
                     int nextCellRow = emptyCellRow + DirectionRow[dir];
                     int nextCellColumn = emptyCellColumn + DirectionColumn[dir];
 
-                    if (matrix[nextCellRow, nextCellColumn] == cellNumber.ToString())
+                    if (Matrix[nextCellRow, nextCellColumn] == cellNumber.ToString())
                     {
                         direction = dir;
                         break;
