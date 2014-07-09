@@ -4,6 +4,9 @@
     using System.Linq;
     using System.Text;
 
+    /// <summary>
+    /// This class is resposible for printing all the messages a player can get during his play.
+    /// </summary>
     public static class ConsoleWriter
     {
         public static void PrintCellDoesNotExistMessage()
