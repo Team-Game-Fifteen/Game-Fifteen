@@ -9,7 +9,7 @@
         public Game()
         {
             this.Turn = 0;
-            this.Board = new Board();
+            this.Board = Board.Instance;
         }
 
         public int Turn { get; private set; }

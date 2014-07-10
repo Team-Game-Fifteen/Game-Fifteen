@@ -3,12 +3,13 @@
     using System;
     using System.Linq;
 
-    public class Board
+    public sealed class Board
     {
         // TODO implement Singleton pattern.
 
         public const int MatrixSizeRows = 4;
         public const int MatrixSizeColumns = 4;
+        public const int MatrixSize = MatrixSizeRows * MatrixSizeColumns;
 
         private const string EmptyCellValue = " ";
         private readonly int[] DirectionRow = { -1, 0, 1, 0 };
@@ -17,8 +18,18 @@
         private int emptyCellColumn;
 
         private Random random = new Random();
+
+        private static readonly Board board = new Board();
               
-        public Board()
+        public static Board Instance
+        {
+            get
+            {
+                return board;
+            }
+        }
+
+        private Board()
         {
             this.InitializeMatrix();
             
@@ -60,8 +71,7 @@
 
         public void NextMove(int cellNumber)
         {
-            int matrixSize = MatrixSizeRows * MatrixSizeColumns;  //extract as a constant? or calc it every time?
-            if (cellNumber <= 0 || cellNumber >= matrixSize)
+            if (cellNumber <= 0 || cellNumber >= MatrixSize)
             {
                 ConsoleWriter.PrintCellDoesNotExistMessage();
                 return;
