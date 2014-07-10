@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -39,7 +39,7 @@ namespace GameFifteen_Tests
         [Test]
         public void TestInitializeMatrix()
         {
-            Board testBoard = new Board();
+            Board testBoard = Board.Instance;
 
             string[,] expectedOutput = 
             {
@@ -58,7 +58,7 @@ namespace GameFifteen_Tests
         [Test]
         public void TestShuffleMatrix()
         {
-            Board testBoard = new Board();
+            Board testBoard = Board.Instance;
             testBoard.ShuffleMatrix();
 
             string[,] matrixBeforeShuffle = 
@@ -78,7 +78,7 @@ namespace GameFifteen_Tests
         [Test]
         public void TestNextMove()
         {
-            Board testBoard = new Board();
+            Board testBoard = Board.Instance;
             testBoard.NextMove(15);
 
             string[,] expectedMatrixAfterNextMove = 
@@ -98,7 +98,7 @@ namespace GameFifteen_Tests
         [Test]
         public void TestIsMatrixOrdered()
         {
-            Board testBoard = new Board();
+            Board testBoard = Board.Instance;
 
             bool isMatrixOrdered = testBoard.IsMatrixOrdered();
             Assert.IsTrue(isMatrixOrdered);
@@ -107,7 +107,7 @@ namespace GameFifteen_Tests
         [Test]
         public void TestCheckIfCellIsValid()
         {
-            Board testBoard = new Board();
+            Board testBoard = Board.Instance;
 
             int direction = 3;
             bool cellIsValid = testBoard.CheckIfCellIsValid(direction);
