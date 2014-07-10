@@ -5,8 +5,6 @@
 
     public sealed class Board
     {
-        // TODO implement Singleton pattern.
-
         public const int MatrixSizeRows = 4;
         public const int MatrixSizeColumns = 4;
         public const int MatrixSize = MatrixSizeRows * MatrixSizeColumns;
