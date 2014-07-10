@@ -26,18 +26,18 @@
         {
             string moves = this.Turn == 1 ? "1 move" : string.Format("{0} moves", this.Turn);
             Console.WriteLine("Congratulations! You won the game in {0}.", moves);
-            string[] topScores = Score.GetTopScoresFromFile();
-            if (topScores[Score.TopScoresAmount - 1] != null)
+            string[] topScores = TopScores.GetTopScoresFromFile();
+            if (topScores[TopScores.TopScoresAmount - 1] != null)
             {
-                string lowestScore = Regex.Replace(topScores[Score.TopScoresAmount - 1], Score.TopScoresPersonPattern, @"$2");
+                string lowestScore = Regex.Replace(topScores[TopScores.TopScoresAmount - 1], TopScores.TopScoresPersonPattern, @"$2");
                 if (int.Parse(lowestScore) < this.Turn)
                 {
-                    Console.WriteLine("You couldn't get in the top {0} scoreboard.", Score.TopScoresAmount);
+                    Console.WriteLine("You couldn't get in the top {0} scoreboard.", TopScores.TopScoresAmount);
                     return;
                 }
             }
 
-            Score.UpgradeTopScore(this);
+            TopScores.UpgradeTopScore(this);
         }
 
     }

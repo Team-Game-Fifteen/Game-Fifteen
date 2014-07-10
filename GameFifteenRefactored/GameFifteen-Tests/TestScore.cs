@@ -15,7 +15,7 @@ namespace GameFifteen_Tests
         [Test]
         public void TestGetTopScoresFromFile()
         {
-            Score.GetTopScoresFromFile();
+            TopScores.GetTopScoresFromFile();
             string filePath = @"Top.txt";
 
             bool fileExist = File.Exists(filePath);

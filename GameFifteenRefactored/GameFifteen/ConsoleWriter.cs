@@ -61,7 +61,7 @@
         public static void PrintTopScores()
         {
             Console.WriteLine("Scoreboard:");
-            string[] topScores = Score.GetTopScoresFromFile();
+            string[] topScores = TopScores.GetTopScoresFromFile();
             if (topScores[0] == null)
             {
                 Console.WriteLine("There are no scores to display yet.");
