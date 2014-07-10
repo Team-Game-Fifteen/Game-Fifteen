@@ -39,7 +39,7 @@ namespace GameFifteen_Tests
         [Test]
         public void TestInitializeMatrix()
         {
-            GameBoard testBoard = new GameBoard();
+            Board testBoard = new Board();
 
             string[,] expectedOutput = 
             {
@@ -58,7 +58,7 @@ namespace GameFifteen_Tests
         [Test]
         public void TestShuffleMatrix()
         {
-            GameBoard testBoard = new GameBoard();
+            Board testBoard = new Board();
             testBoard.ShuffleMatrix();
 
             string[,] matrixBeforeShuffle = 
@@ -78,7 +78,7 @@ namespace GameFifteen_Tests
         [Test]
         public void TestNextMove()
         {
-            GameBoard testBoard = new GameBoard();
+            Board testBoard = new Board();
             testBoard.NextMove(15);
 
             string[,] expectedMatrixAfterNextMove = 
@@ -98,7 +98,7 @@ namespace GameFifteen_Tests
         [Test]
         public void TestIsMatrixOrdered()
         {
-            GameBoard testBoard = new GameBoard();
+            Board testBoard = new Board();
 
             bool isMatrixOrdered = testBoard.IsMatrixOrdered();
             Assert.IsTrue(isMatrixOrdered);
@@ -107,7 +107,7 @@ namespace GameFifteen_Tests
         [Test]
         public void TestCheckIfCellIsValid()
         {
-            GameBoard testBoard = new GameBoard();
+            Board testBoard = new Board();
 
             int direction = 3;
             bool cellIsValid = testBoard.CheckIfCellIsValid(direction);

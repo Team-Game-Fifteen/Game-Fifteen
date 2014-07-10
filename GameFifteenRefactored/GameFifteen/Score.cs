@@ -11,7 +11,7 @@
         public const string TopScoresFileName = "Top.txt";
         public const string TopScoresPersonPattern = @"^\d+\. (.+) --> (\d+) moves?$";
 
-        public static void UpgradeTopScore(GameBoard board)
+        public static void UpgradeTopScore(Game game)
         {
             string[] topScores = GetTopScoresFromFile();
             Console.Write("Please enter your name for the top scoreboard: ");
@@ -21,7 +21,7 @@
             //    name = "Anonymous";
             //}
 
-            topScores[TopScoresAmount] = string.Format("0. {0} --> {1} move", name, board.Turn);
+            topScores[TopScoresAmount] = string.Format("0. {0} --> {1} move", name, game.Turn);
             Array.Sort(topScores);
 
             PersonalScore[] topScoresPairs = UpgradeTopScorePairs(topScores);

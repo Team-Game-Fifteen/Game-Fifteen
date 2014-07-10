@@ -34,20 +34,20 @@
             Console.Write("Enter a number to move: ");
         }
 
-        public static void PrintMatrix(GameBoard board)
+        public static void PrintMatrix(Board board)
         {
             StringBuilder horizontalBorder = new StringBuilder("  ");
-            for (int i = 0; i < GameBoard.MatrixSizeColumns; i++)
+            for (int i = 0; i < Board.MatrixSizeColumns; i++)
             {
                 horizontalBorder.Append("---");
             }
 
             horizontalBorder.Append("- ");
             Console.WriteLine(horizontalBorder);
-            for (int row = 0; row < GameBoard.MatrixSizeRows; row++)
+            for (int row = 0; row < Board.MatrixSizeRows; row++)
             {
                 Console.Write(" |");
-                for (int column = 0; column < GameBoard.MatrixSizeColumns; column++)
+                for (int column = 0; column < Board.MatrixSizeColumns; column++)
                 {
                     Console.Write("{0,3}", board.Matrix[row, column]);
                 }

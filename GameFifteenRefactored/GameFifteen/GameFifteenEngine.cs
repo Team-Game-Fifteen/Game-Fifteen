@@ -24,13 +24,13 @@
         /// </summary>
         public static void PlayGame()
         {
-            GameBoard board = new GameBoard();
+            Game game = new Game();
 
             while (true)
             {
-                board.ShuffleMatrix();
+                game.Board.ShuffleMatrix();
                 ConsoleWriter.PrintWelcomeMessage();
-                ConsoleWriter.PrintMatrix(board);
+                ConsoleWriter.PrintMatrix(game.Board);
                 while (true)
                 {
                     ConsoleWriter.PrintNextMoveMessage();
@@ -38,17 +38,15 @@
                     int cellNumber;
                     if (int.TryParse(consoleInputLine, out cellNumber))
                     {
-                        //Input is a cell number.
-                        board.NextMove(cellNumber);
-                        if (board.IsMatrixOrdered())
+                        game.Board.NextMove(cellNumber);
+                        if (game.Board.IsMatrixOrdered())
                         {
-                            TheEnd(board);
+                            game.TheEnd();
                             break;
                         }
                     }
                     else
                     {
-                        //Input is a command.
                         if (consoleInputLine == "restart")
                         {
                             break;
@@ -62,6 +60,12 @@
                             case "exit":
                                 ConsoleWriter.PrintGoodbye();
                                 return;
+                            case "save":
+                                ConsoleWriter.PrintTopScores();
+                                break;
+                            case "restore":
+                                ConsoleWriter.PrintTopScores();
+                                break;
                             default:
                                 ConsoleWriter.PrintIllegalCommandMessage();
                                 break;
@@ -69,30 +73,6 @@
                     }
                 }
             }
-        }
-
-        /// <summary>
-        /// This method prints on the console all the information the player needs after beating the game.
-        /// Number of moves he made, the top score list and if the player was able to get on the top score list.
-        /// </summary>
-        /// <param name="board">It uses the information from the instance of the GameBoard class to tell how much turn
-        /// it took the player to finish the game.</param>
-        private static void TheEnd(GameBoard board)
-        {
-            string moves = board.Turn == 1 ? "1 move" : string.Format("{0} moves", board.Turn);
-            Console.WriteLine("Congratulations! You won the game in {0}.", moves);
-            string[] topScores = Score.GetTopScoresFromFile();
-            if (topScores[Score.TopScoresAmount - 1] != null)
-            {
-                string lowestScore = Regex.Replace(topScores[Score.TopScoresAmount - 1], Score.TopScoresPersonPattern, @"$2");
-                if (int.Parse(lowestScore) < board.Turn)
-                {
-                    Console.WriteLine("You couldn't get in the top {0} scoreboard.", Score.TopScoresAmount);
-                    return;
-                }
-            }
-
-            Score.UpgradeTopScore(board);
-        }
+        }        
     }
 }
