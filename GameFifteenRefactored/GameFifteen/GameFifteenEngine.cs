@@ -61,10 +61,12 @@
                                 ConsoleWriter.PrintGoodbye();
                                 return;
                             case "save":
-                                ConsoleWriter.PrintTopScores();
+                                game.SaveState();
+                                ConsoleWriter.PrintStateSaved();
                                 break;
                             case "restore":
-                                ConsoleWriter.PrintTopScores();
+                                game.RestoreState();
+                                ConsoleWriter.PrintMatrix(game.Board);
                                 break;
                             default:
                                 ConsoleWriter.PrintIllegalCommandMessage();
@@ -73,6 +75,6 @@
                     }
                 }
             }
-        }        
+        }
     }
 }

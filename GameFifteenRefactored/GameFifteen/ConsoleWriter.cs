@@ -9,32 +9,42 @@
     /// </summary>
     public static class ConsoleWriter
     {
-        public static void PrintCellDoesNotExistMessage()
+        internal static void PrintCellDoesNotExistMessage()
         {
             Console.WriteLine("That cell does not exist in the matrix.");
         }
 
-        public static void PrintGoodbye()
+        internal static void PrintGoodbye()
         {
             Console.WriteLine("Good bye!");
         }
 
-        public static void PrintIllegalCommandMessage()
+        internal static void PrintIllegalCommandMessage()
         {
             Console.WriteLine("Illegal command!");
         }
 
-        public static void PrintIllegalMoveMessage()
+        internal static void PrintIllegalMoveMessage()
         {
             Console.WriteLine("Illegal move!");
         }
 
-        public static void PrintNextMoveMessage()
+        internal static void PrintStateSaved()
+        {
+            Console.WriteLine("The current state is saved");
+        }
+
+        internal static void PrintNoSavedStateMessage()
+        {
+            Console.WriteLine("There is no state to be restored!");
+        }
+
+        internal static void PrintNextMoveMessage()
         {
             Console.Write("Enter a number to move: ");
         }
 
-        public static void PrintMatrix(Board board)
+        internal static void PrintMatrix(Board board)
         {
             StringBuilder horizontalBorder = new StringBuilder("  ");
             for (int i = 0; i < Board.MatrixSizeColumns; i++)
@@ -58,7 +68,7 @@
             Console.WriteLine(horizontalBorder);
         }
 
-        public static void PrintTopScores()
+        internal static void PrintTopScores()
         {
             Console.WriteLine("Scoreboard:");
             string[] topScores = TopScores.GetTopScoresFromFile();
@@ -78,12 +88,13 @@
             }
         }
 
-        public static void PrintWelcomeMessage()
+        internal static void PrintWelcomeMessage()
         {
             Console.Write("Welcome to the game \"15\". ");
             Console.WriteLine("Please try to arrange the numbers sequentially. ");
             Console.WriteLine("Use 'top' to view the top scoreboard, " +
                               "'restart' to start a new game and 'exit'  to quit the game.");
         }
+
     }
 }

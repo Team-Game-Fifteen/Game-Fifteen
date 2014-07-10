@@ -3,7 +3,7 @@
     using System;
     using System.Linq;
 
-    public sealed class Board
+    public sealed class Board : ICloneable
     {
         public const int MatrixSizeRows = 4;
         public const int MatrixSizeColumns = 4;
@@ -111,7 +111,20 @@
 
             return true;
         }
+        public object Clone()
+        {
+            Board temp = (Board)this.MemberwiseClone();
+            string[,] tempMatrix = new string[this.Matrix.GetLength(0), this.Matrix.GetLength(1)];
 
+            for (int i = 0; i < this.Matrix.GetLength(0); i++)
+                for (int j = 0; j < this.Matrix.GetLength(1); j++)
+                {
+                    tempMatrix[i, j] = this.Matrix[i, j];
+                }
+
+            temp.Matrix = tempMatrix;
+            return temp;
+        }
         private void InitializeMatrix()
         {
             this.Matrix = new string[MatrixSizeRows, MatrixSizeColumns];
