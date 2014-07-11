@@ -3,7 +3,6 @@
     using System;
     using System.Collections.Generic;
     using System.Linq;
-    using System.Text.RegularExpressions;
 
     public class Game
     {
@@ -34,7 +33,6 @@
             {
                 State lastState = this.SavedStates.Last();
                 this.SavedStates.Remove(lastState);
-                //  GameBoard clonedBoard = (GameBoard)lastState.GameBoard.Clone();
                 this.Board = lastState.Board;
                 this.Turn = lastState.Turn;
             }
@@ -48,7 +46,9 @@
 
         private void UpdateTurns(object sender, MovePerformedEventArgs e)
         {
-            this.Turn = e.Moves;
+            this.Turn++;
+           // this.Turn = e.Moves;
+            Console.WriteLine(this.Turn);
         }
     }
 }

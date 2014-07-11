@@ -1,12 +1,7 @@
 ﻿namespace GameFifteen
 {
     using System;
-    using System.Collections.Generic;
-    using System.IO;
     using System.Linq;
-    using System.Text;
-    using System.Text.RegularExpressions;
-    using System.Threading.Tasks;
 
     /// <summary>
     /// GameFifteenEngine is our "main" class. Here we make instances of the public classes and call the public 

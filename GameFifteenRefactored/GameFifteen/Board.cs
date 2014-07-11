@@ -14,13 +14,13 @@
         private readonly int[] DirectionColumn = { 0, 1, 0, -1 };
         private int emptyCellRow;
         private int emptyCellColumn;
-        private int movesCount = 0;
+        //private int movesCount = 0;
         public event EventHandler<MovePerformedEventArgs> MovePerformed;
 
         private Random random = new Random();
 
         private static readonly Board board = new Board();
-              
+
         public static Board Instance
         {
             get
@@ -32,7 +32,7 @@
         private Board()
         {
             this.InitializeMatrix();
-            
+
         }
 
         public string[,] Matrix { get; private set; }
@@ -59,7 +59,7 @@
                 int direction = this.random.Next(this.DirectionRow.Length);
                 if (this.CheckIfCellIsValid(direction))
                 {
-                    this.MoveCell(direction);                    
+                    this.MoveCell(direction);
                 }
             }
 
@@ -85,6 +85,7 @@
             }
 
             this.MoveCell(direction);
+            OnMovePerformed();
             ConsoleWriter.PrintMatrix(this);
         }
 
@@ -113,6 +114,8 @@
 
             return true;
         }
+
+        //TODO rewrite it
         public object Clone()
         {
             Board temp = (Board)this.MemberwiseClone();
@@ -127,6 +130,7 @@
             temp.Matrix = tempMatrix;
             return temp;
         }
+
         private void InitializeMatrix()
         {
             this.Matrix = new string[MatrixSizeRows, MatrixSizeColumns];
@@ -145,7 +149,7 @@
             this.emptyCellColumn = MatrixSizeColumns - 1;
             this.Matrix[this.emptyCellRow, this.emptyCellColumn] = EmptyCellValue;
         }
-        
+
         private void MoveCell(int direction)
         {
             int nextCellRow = this.emptyCellRow + this.DirectionRow[direction];
@@ -154,17 +158,23 @@
             this.Matrix[nextCellRow, nextCellColumn] = EmptyCellValue;
             this.emptyCellRow = nextCellRow;
             this.emptyCellColumn = nextCellColumn;
-            this.movesCount++;
-            OnMovePerformed(this.movesCount);
-            
-            // TODO on each move increase game.Turn through event
+
+            //  this.movesCount++;
+            //   OnMovePerformed(this.movesCount);          
         }
 
-        private void OnMovePerformed(int moves)
+        //private void OnMovePerformed(int moves)
+        //{
+        //    if (MovePerformed != null)
+        //    {
+        //        MovePerformed(this, new MovePerformedEventArgs(moves));
+        //    }
+        //}
+        private void OnMovePerformed()
         {
             if (MovePerformed != null)
             {
-                MovePerformed(this, new MovePerformedEventArgs(moves));
+                MovePerformed(this, new MovePerformedEventArgs());
             }
         }
 
