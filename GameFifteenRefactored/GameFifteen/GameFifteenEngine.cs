@@ -25,11 +25,12 @@
         public static void PlayGame()
         {
             Game game = new Game();
+            game.LoadTurns();
 
             while (true)
             {
                 game.Board.ShuffleMatrix();
-                game.LoadTurns();
+                
                 ConsoleWriter.PrintWelcomeMessage();
                 ConsoleWriter.PrintMatrix(game.Board);
                 while (true)
