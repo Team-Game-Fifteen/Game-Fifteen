@@ -14,6 +14,8 @@
         private readonly int[] DirectionColumn = { 0, 1, 0, -1 };
         private int emptyCellRow;
         private int emptyCellColumn;
+        private int movesCount = 0;
+        public event EventHandler<MovePerformedEventArgs> MovePerformed;
 
         private Random random = new Random();
 
@@ -152,7 +154,18 @@
             this.Matrix[nextCellRow, nextCellColumn] = EmptyCellValue;
             this.emptyCellRow = nextCellRow;
             this.emptyCellColumn = nextCellColumn;
+            this.movesCount++;
+            OnMovePerformed(this.movesCount);
+            
             // TODO on each move increase game.Turn through event
+        }
+
+        private void OnMovePerformed(int moves)
+        {
+            if (MovePerformed != null)
+            {
+                MovePerformed(this, new MovePerformedEventArgs(moves));
+            }
         }
 
         private int CellNumberToDirection(int cellNumber)

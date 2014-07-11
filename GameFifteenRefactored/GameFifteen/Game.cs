@@ -11,34 +11,47 @@
         {
             this.Turn = 0;
             this.Board = Board.Instance;
-            this.SavedSates = new List<State>();
+            this.SavedStates = new List<State>();
         }
 
         public int Turn { get; private set; }
         public Board Board { get; private set; }
-        public IList<State> SavedSates { get; private set; } //Rewrite it with stack
+        public IList<State> SavedStates { get; private set; } //Rewrite it with stack
 
         public void SaveState()
         {
             Board clonedBoard = (Board)this.Board.Clone();
-            this.SavedSates.Add(new State(this.Turn, clonedBoard));
+            this.SavedStates.Add(new State(this.Turn, clonedBoard));
         }
 
         public void RestoreState()
         {
-            if (this.SavedSates.Count == 0)
+            if (this.SavedStates.Count == 0)
             {
                 ConsoleWriter.PrintNoSavedStateMessage();
             }
             else
             {
-                State lastState = this.SavedSates.Last();
-                this.SavedSates.Remove(lastState);
-                //  Board clonedBoard = (Board)lastState.Board.Clone();
+                State lastState = this.SavedStates.Last();
+                this.SavedStates.Remove(lastState);
+                //  GameBoard clonedBoard = (GameBoard)lastState.GameBoard.Clone();
                 this.Board = lastState.Board;
                 this.Turn = lastState.Turn;
             }
         }
+
+        
+        public void LoadTurns()
+        {
+            this.Board.MovePerformed += new EventHandler<MovePerformedEventArgs>(UpdateTurns);
+        }
+
+        private void UpdateTurns(object sender, MovePerformedEventArgs e)
+        {
+            this.Turn = e.Moves;
+        }
+
+
 
         /// <summary>
         /// This method prints on the console all the information the player needs after beating the game.
@@ -46,7 +59,7 @@
         /// </summary>
 
 
-        public void TheEnd()
+        public void PrintFinalGameResult()
         {
             string moves = this.Turn == 1 ? "1 move" : string.Format("{0} moves", this.Turn);
             Console.WriteLine("Congratulations! You won the game in {0}.", moves);

@@ -29,6 +29,7 @@
             while (true)
             {
                 game.Board.ShuffleMatrix();
+                game.LoadTurns();
                 ConsoleWriter.PrintWelcomeMessage();
                 ConsoleWriter.PrintMatrix(game.Board);
                 while (true)
@@ -41,7 +42,7 @@
                         game.Board.NextMove(cellNumber);
                         if (game.Board.IsMatrixOrdered())
                         {
-                            game.TheEnd();
+                            game.PrintFinalGameResult();
                             break;
                         }
                     }
