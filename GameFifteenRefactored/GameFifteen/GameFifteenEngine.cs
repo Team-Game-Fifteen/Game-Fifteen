@@ -43,7 +43,7 @@
                         game.Board.NextMove(cellNumber);
                         if (game.Board.IsMatrixOrdered())
                         {
-                            game.PrintFinalGameResult();
+                            ConsoleWriter.PrintFinalGameResult(game);
                             break;
                         }
                     }

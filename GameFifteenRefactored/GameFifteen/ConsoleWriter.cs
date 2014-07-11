@@ -3,6 +3,7 @@
     using System;
     using System.Linq;
     using System.Text;
+    using System.Text.RegularExpressions;
 
     /// <summary>
     /// This class is resposible for printing all the messages a player can get during his play.
@@ -96,5 +97,26 @@
                               "'restart' to start a new game and 'exit'  to quit the game.");
         }
 
+        /// <summary>
+        /// This method prints on the console all the information the player needs after beating the game.
+        /// Number of moves he made, the top score list and if the player was able to get on the top score list.
+        /// </summary>
+        internal static void PrintFinalGameResult(Game game)
+        {
+            string moves = game.Turn == 1 ? "1 move" : string.Format("{0} moves", game.Turn);
+            Console.WriteLine("Congratulations! You won the game in {0}.", moves);
+            string[] topScores = TopScores.GetTopScoresFromFile();
+            if (topScores[TopScores.TopScoresAmount - 1] != null)
+            {
+                string lowestScore = Regex.Replace(topScores[TopScores.TopScoresAmount - 1], TopScores.TopScoresPersonPattern, @"$2");
+                if (int.Parse(lowestScore) < game.Turn)
+                {
+                    Console.WriteLine("You couldn't get in the top {0} scoreboard.", TopScores.TopScoresAmount);
+                    return;
+                }
+            }
+
+            TopScores.UpgradeTopScore(game);
+        }
     }
 }

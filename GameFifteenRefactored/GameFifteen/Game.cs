@@ -40,7 +40,7 @@
             }
         }
 
-        
+
         public void LoadTurns()
         {
             this.Board.MovePerformed += new EventHandler<MovePerformedEventArgs>(UpdateTurns);
@@ -50,32 +50,5 @@
         {
             this.Turn = e.Moves;
         }
-
-
-
-        /// <summary>
-        /// This method prints on the console all the information the player needs after beating the game.
-        /// Number of moves he made, the top score list and if the player was able to get on the top score list.
-        /// </summary>
-
-
-        public void PrintFinalGameResult()
-        {
-            string moves = this.Turn == 1 ? "1 move" : string.Format("{0} moves", this.Turn);
-            Console.WriteLine("Congratulations! You won the game in {0}.", moves);
-            string[] topScores = TopScores.GetTopScoresFromFile();
-            if (topScores[TopScores.TopScoresAmount - 1] != null)
-            {
-                string lowestScore = Regex.Replace(topScores[TopScores.TopScoresAmount - 1], TopScores.TopScoresPersonPattern, @"$2");
-                if (int.Parse(lowestScore) < this.Turn)
-                {
-                    Console.WriteLine("You couldn't get in the top {0} scoreboard.", TopScores.TopScoresAmount);
-                    return;
-                }
-            }
-
-            TopScores.UpgradeTopScore(this);
-        }
-
     }
 }
