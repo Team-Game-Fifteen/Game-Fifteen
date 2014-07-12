@@ -1,6 +1,7 @@
 ﻿namespace GameFifteen
 {
     using System;
+    using System.Collections;
     using System.Collections.Generic;
     using System.Linq;
 
@@ -10,16 +11,16 @@
         {
             this.Turn = 0;
             this.Board = Board.Instance;
-            this.SavedStates = new List<State>();
+            this.SavedStates = new Stack();
         }
 
         public int Turn { get; private set; }
         public Board Board { get; private set; }
-        public IList<State> SavedStates { get; private set; } //Rewrite it with stack
+        public Stack SavedStates { get; private set; }
 
         public void SaveState()
         {
-            this.SavedStates.Add(new State(this.Turn, this.Board));
+            this.SavedStates.Push(new State(this.Turn, this.Board));
         }
 
         public void RestoreState()
@@ -30,8 +31,7 @@
             }
             else
             {
-                State lastState = this.SavedStates.Last();
-                this.SavedStates.Remove(lastState);
+                State lastState = (State)this.SavedStates.Pop();
                 this.Turn = lastState.Turn;
                 this.Board.ResetBoard(lastState);
             }
