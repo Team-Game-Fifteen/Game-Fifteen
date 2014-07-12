@@ -3,18 +3,16 @@
     using System;
     using System.Linq;
 
-    public sealed class Board : ICloneable
+    public sealed class Board 
     {
         public const int MatrixSizeRows = 4;
         public const int MatrixSizeColumns = 4;
         public const int MatrixSize = MatrixSizeRows * MatrixSizeColumns;
 
+
         private const string EmptyCellValue = " ";
         private readonly int[] DirectionRow = { -1, 0, 1, 0 };
         private readonly int[] DirectionColumn = { 0, 1, 0, -1 };
-        private int emptyCellRow;
-        private int emptyCellColumn;
-        //private int movesCount = 0;
         public event EventHandler<MovePerformedEventArgs> MovePerformed;
 
         private Random random = new Random();
@@ -35,16 +33,18 @@
 
         }
 
-        public string[,] Matrix { get; private set; }
+        public string[,] Matrix { get; private set; } // encapsulate it
         public int EmptyCellRow { get; private set; }
         public int EmptyCellColumn { get; private set; }
 
         public bool CheckIfCellIsValid(int direction)
         {
-            int nextCellRow = this.emptyCellRow + this.DirectionRow[direction];
+            int nextCellRow = this.EmptyCellRow + this.DirectionRow[direction];
             bool isRowValid = nextCellRow >= 0 && nextCellRow < MatrixSizeRows;
-            int nextCellColumn = this.emptyCellColumn + this.DirectionColumn[direction];
+
+            int nextCellColumn = this.EmptyCellColumn + this.DirectionColumn[direction];
             bool isColumnValid = nextCellColumn >= 0 && nextCellColumn < MatrixSizeColumns;
+
             bool isCellValid = isRowValid && isColumnValid;
 
             return isCellValid;
@@ -91,7 +91,7 @@
 
         public bool IsMatrixOrdered()
         {
-            bool isEmptyCellInPlace = (this.emptyCellRow == MatrixSizeRows - 1) && (this.emptyCellColumn == MatrixSizeColumns - 1);
+            bool isEmptyCellInPlace = (this.EmptyCellRow == MatrixSizeRows - 1) && (this.EmptyCellColumn == MatrixSizeColumns - 1);
             if (!isEmptyCellInPlace)
             {
                 return false;
@@ -115,20 +115,11 @@
             return true;
         }
 
-        //TODO rewrite it
-        public object Clone()
+        public void ResetBoard(State state)
         {
-            Board temp = (Board)this.MemberwiseClone();
-            string[,] tempMatrix = new string[this.Matrix.GetLength(0), this.Matrix.GetLength(1)];
-
-            for (int i = 0; i < this.Matrix.GetLength(0); i++)
-                for (int j = 0; j < this.Matrix.GetLength(1); j++)
-                {
-                    tempMatrix[i, j] = this.Matrix[i, j];
-                }
-
-            temp.Matrix = tempMatrix;
-            return temp;
+            this.Matrix = state.Matrix;  //state.Matrix is a cloning of the original matrix
+            this.EmptyCellColumn = state.EmptyCellColumn;
+            this.EmptyCellRow = state.EmptyCellRow;
         }
 
         private void InitializeMatrix()
@@ -145,31 +136,21 @@
                 }
             }
 
-            this.emptyCellRow = MatrixSizeRows - 1;
-            this.emptyCellColumn = MatrixSizeColumns - 1;
-            this.Matrix[this.emptyCellRow, this.emptyCellColumn] = EmptyCellValue;
+            this.EmptyCellRow = MatrixSizeRows - 1;
+            this.EmptyCellColumn = MatrixSizeColumns - 1;
+            this.Matrix[this.EmptyCellRow, this.EmptyCellColumn] = EmptyCellValue;
         }
 
         private void MoveCell(int direction)
         {
-            int nextCellRow = this.emptyCellRow + this.DirectionRow[direction];
-            int nextCellColumn = this.emptyCellColumn + this.DirectionColumn[direction];
-            this.Matrix[this.emptyCellRow, this.emptyCellColumn] = this.Matrix[nextCellRow, nextCellColumn];
+            int nextCellRow = this.EmptyCellRow + this.DirectionRow[direction];
+            int nextCellColumn = this.EmptyCellColumn + this.DirectionColumn[direction];
+            this.Matrix[this.EmptyCellRow, this.EmptyCellColumn] = this.Matrix[nextCellRow, nextCellColumn];
             this.Matrix[nextCellRow, nextCellColumn] = EmptyCellValue;
-            this.emptyCellRow = nextCellRow;
-            this.emptyCellColumn = nextCellColumn;
-
-            //  this.movesCount++;
-            //   OnMovePerformed(this.movesCount);          
+            this.EmptyCellRow = nextCellRow;
+            this.EmptyCellColumn = nextCellColumn;
         }
 
-        //private void OnMovePerformed(int moves)
-        //{
-        //    if (MovePerformed != null)
-        //    {
-        //        MovePerformed(this, new MovePerformedEventArgs(moves));
-        //    }
-        //}
         private void OnMovePerformed()
         {
             if (MovePerformed != null)
@@ -187,8 +168,8 @@
 
                 if (isDirValid)
                 {
-                    int nextCellRow = this.emptyCellRow + this.DirectionRow[dir];
-                    int nextCellColumn = this.emptyCellColumn + this.DirectionColumn[dir];
+                    int nextCellRow = this.EmptyCellRow + this.DirectionRow[dir];
+                    int nextCellColumn = this.EmptyCellColumn + this.DirectionColumn[dir];
 
                     if (this.Matrix[nextCellRow, nextCellColumn] == cellNumber.ToString())
                     {

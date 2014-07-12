@@ -19,8 +19,7 @@
 
         public void SaveState()
         {
-            Board clonedBoard = (Board)this.Board.Clone();
-            this.SavedStates.Add(new State(this.Turn, clonedBoard));
+            this.SavedStates.Add(new State(this.Turn, this.Board));
         }
 
         public void RestoreState()
@@ -33,11 +32,10 @@
             {
                 State lastState = this.SavedStates.Last();
                 this.SavedStates.Remove(lastState);
-                this.Board = lastState.Board;
                 this.Turn = lastState.Turn;
+                this.Board.ResetBoard(lastState);
             }
         }
-
 
         public void LoadTurns()
         {
@@ -47,8 +45,6 @@
         private void UpdateTurns(object sender, MovePerformedEventArgs e)
         {
             this.Turn++;
-           // this.Turn = e.Moves;
-            Console.WriteLine(this.Turn);
         }
     }
 }

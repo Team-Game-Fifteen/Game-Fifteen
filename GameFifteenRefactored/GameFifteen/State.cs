@@ -8,11 +8,14 @@ namespace GameFifteen
         public State(int turn, Board board)
         {
             this.Turn = turn;
-            //TODO modify Clone() implementation
-            this.Board = (Board)board.Clone();
+            this.Matrix = (string[,])board.Matrix.Clone();
+            this.EmptyCellColumn = board.EmptyCellColumn;
+            this.EmptyCellRow = board.EmptyCellRow;
         }
 
-        public Board Board { get; private set; }
         public int Turn { get; private set; }
+        public string[,] Matrix { get; private set; }
+        public int EmptyCellRow { get; private set; }
+        public int EmptyCellColumn { get; private set; }
     }
 }
