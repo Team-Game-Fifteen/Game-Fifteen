@@ -113,6 +113,6 @@ namespace GameFifteen_Tests
             bool cellIsValid = testBoard.CheckIfCellIsValid(direction);
 
             Assert.IsTrue(cellIsValid);
-        }        
+        }
     }
 }

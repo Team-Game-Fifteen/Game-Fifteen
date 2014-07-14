@@ -2,7 +2,6 @@
 {
     using System;
     using System.Collections;
-    using System.Collections.Generic;
     using System.Linq;
 
     public class Game
@@ -39,13 +38,13 @@
 
         public void LoadTurns()
         {
-            this.Board.MovePerformed += new EventHandler<MovePerformedEventArgs>(UpdateTurns);
+            this.Board.MovePerformed += new EventHandler<MovePerformedEventArgs>(this.UpdateTurns);
         }
 
         private void UpdateTurns(object sender, MovePerformedEventArgs e)
         {
             this.Turn++;
-          //  Console.WriteLine(this.Turn);
+          // Console.WriteLine(this.Turn);
         }
     }
 }
