@@ -5,8 +5,15 @@ namespace GameFifteen.ManageInput
 {
     class Move : ICommand
     {
+        /// <summary>
+        /// instance of the game to execute move
+        /// </summary>
         private Game game;
 
+        /// <summary>
+        /// creates an instance to execute moves
+        /// </summary>
+        /// <param name="game"> the game instance </param>
         public Move(Game game)
         {
             this.game = game;

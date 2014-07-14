@@ -5,6 +5,9 @@ namespace GameFifteen.ManageInput
 {
     class Restart : ICommand
     {
+        /// <summary>
+        /// the instance of the game to be restarted
+        /// </summary>
         private Game game;
 
         public Restart(Game game)

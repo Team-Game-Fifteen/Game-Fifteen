@@ -5,6 +5,9 @@ namespace GameFifteen.ManageInput
 {
     public class Save : ICommand
     {
+        /// <summary>
+        /// instance of the game to be saved
+        /// </summary>
         private Game game;
 
         public Save(Game game)

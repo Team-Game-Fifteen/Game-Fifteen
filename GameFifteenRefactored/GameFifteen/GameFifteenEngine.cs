@@ -10,6 +10,9 @@
     /// </summary>
     public class GameFifteenEngine
     {
+        /// <summary>
+        /// Main method, which starts the game
+        /// </summary>
         public static void Main()
         {
             PlayGame();

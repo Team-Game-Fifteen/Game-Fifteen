@@ -5,6 +5,9 @@ namespace GameFifteen.ManageInput
 {
     class Restore : ICommand
     {
+        /// <summary>
+        /// instance of a game to restore
+        /// </summary>
         private Game game;
 
         public Restore(Game game)

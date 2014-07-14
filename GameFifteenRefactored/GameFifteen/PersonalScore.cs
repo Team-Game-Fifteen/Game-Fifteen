@@ -2,8 +2,14 @@
 {
     using System;
 
+    /// <summary>
+    /// Defines how the score of each player is described
+    /// </summary>
     public struct PersonalScore
     {
+        /// <summary>
+        /// the name of the player
+        /// </summary>
         private string userName;
         private int userScore;
 
