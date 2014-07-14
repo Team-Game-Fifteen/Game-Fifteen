@@ -48,17 +48,17 @@
         internal static void PrintMatrix(Board board)
         {
             StringBuilder horizontalBorder = new StringBuilder("  ");
-            for (int i = 0; i < Board.MatrixSizeColumns; i++)
+            for (int i = 0; i < Board.MATRIX_SIZE_COLUMNS; i++)
             {
                 horizontalBorder.Append("---");
             }
 
             horizontalBorder.Append("- ");
             Console.WriteLine(horizontalBorder);
-            for (int row = 0; row < Board.MatrixSizeRows; row++)
+            for (int row = 0; row < Board.MATRIX_SIZE_ROWS; row++)
             {
                 Console.Write(" |");
-                for (int column = 0; column < Board.MatrixSizeColumns; column++)
+                for (int column = 0; column < Board.MATRIX_SIZE_COLUMNS; column++)
                 {
                     Console.Write("{0,3}", board.Matrix[row, column]);
                 }
@@ -107,12 +107,12 @@
             string moves = game.Turn == 1 ? "1 move" : string.Format("{0} moves", game.Turn);
             Console.WriteLine("Congratulations! You won the game in {0}.", moves);
             string[] topScores = TopScores.GetTopScoresFromFile();
-            if (topScores[TopScores.TopScoresAmount - 1] != null)
+            if (topScores[TopScores.TOP_SCORES_AMOUNT - 1] != null)
             {
-                string lowestScore = Regex.Replace(topScores[TopScores.TopScoresAmount - 1], TopScores.TopScoresPersonPattern, @"$2");
+                string lowestScore = Regex.Replace(topScores[TopScores.TOP_SCORES_AMOUNT - 1], TopScores.TOP_SCORES_PERSON_PATTERN, @"$2");
                 if (int.Parse(lowestScore) < game.Turn)
                 {
-                    Console.WriteLine("You couldn't get in the top {0} scoreboard.", TopScores.TopScoresAmount);
+                    Console.WriteLine("You couldn't get in the top {0} scoreboard.", TopScores.TOP_SCORES_AMOUNT);
                     return;
                 }
             }
