@@ -113,7 +113,7 @@
             this.ShuffleMatrix();  
         }
         
-        private void ShuffleMatrix()
+        public void ShuffleMatrix()
         {
             int matrixSize = MATRIX_SIZE_ROWS * MATRIX_SIZE_COLUMNS;
             int shuffles = this.random.Next(matrixSize, matrixSize * 100);
