@@ -5,18 +5,38 @@
 
     public sealed class Board 
     {
+        /// <summary>
+        /// number of rows in the game
+        /// </summary>
         public const int MATRIX_SIZE_ROWS = 4;
+
+        /// <summary>
+        /// number of columns in the game
+        /// </summary>
         public const int MATRIX_SIZE_COLUMNS = 4;
+
+        /// <summary>
+        /// total size of the game board
+        /// </summary>
         public const int MATRIX_SIZE = MATRIX_SIZE_ROWS * MATRIX_SIZE_COLUMNS;
 
         private const string EMPTY_CELL_VALUE = " ";
         private readonly int[] directionRow = { -1, 0, 1, 0 };
         private readonly int[] directionColumn = { 0, 1, 0, -1 };
 
+        /// <summary>
+        ///
+        /// </summary>
         public event EventHandler<MovePerformedEventArgs> MovePerformed;
 
+        /// <summary>
+        /// instance of a random generator
+        /// </summary>
         private readonly Random random = new Random();
                
+        /// <summary>
+        /// creates initial instance of the board
+        /// </summary>
         public Board()
         {
             this.InitializeMatrix();

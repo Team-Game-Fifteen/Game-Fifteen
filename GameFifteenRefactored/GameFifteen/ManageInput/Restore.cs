@@ -3,6 +3,9 @@ using System.Linq;
 
 namespace GameFifteen.ManageInput
 {
+    /// <summary>
+    /// restore class for loading a game
+    /// </summary>
     class Restore : ICommand
     {
         /// <summary>
@@ -10,6 +13,10 @@ namespace GameFifteen.ManageInput
         /// </summary>
         private Game game;
 
+        /// <summary>
+        /// creates an instance to restore the game
+        /// </summary>
+        /// <param name="game"> the game to be restored </param>
         public Restore(Game game)
         {
             this.game = game;

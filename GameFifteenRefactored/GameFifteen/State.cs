@@ -3,6 +3,9 @@
     using System;
     using System.Linq;
 
+    /// <summary>
+    /// class to define the needed information to save game state
+    /// </summary>
     public class State
     {
         public State(int turn, Board board)
@@ -14,8 +17,11 @@
         }
 
         public int Turn { get; private set; }
+
         public string[,] Matrix { get; private set; }
+
         public int EmptyCellRow { get; private set; }
+
         public int EmptyCellColumn { get; private set; }
     }
 }

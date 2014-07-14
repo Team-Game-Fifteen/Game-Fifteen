@@ -3,6 +3,9 @@ using System.Linq;
 
 namespace GameFifteen.ManageInput
 {
+    /// <summary>
+    /// move class to enable game turn
+    /// </summary>
     class Move : ICommand
     {
         /// <summary>

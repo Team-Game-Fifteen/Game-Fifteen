@@ -10,6 +10,10 @@ namespace GameFifteen.ManageInput
         /// </summary>
         private Game game;
 
+        /// <summary>
+        /// creates an instance to save the game
+        /// </summary>
+        /// <param name="game"> the game to be saved </param>
         public Save(Game game)
         {
             this.game = game;

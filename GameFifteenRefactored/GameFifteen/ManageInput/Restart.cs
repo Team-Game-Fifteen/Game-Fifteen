@@ -1,8 +1,11 @@
-﻿using System;
-using System.Linq;
-
-namespace GameFifteen.ManageInput
+﻿namespace GameFifteen.ManageInput
 {
+    using System;
+    using System.Linq;
+
+    /// <summary>
+    /// restart class for begining a new game
+    /// </summary>
     class Restart : ICommand
     {
         /// <summary>
@@ -10,6 +13,10 @@ namespace GameFifteen.ManageInput
         /// </summary>
         private Game game;
 
+        /// <summary>
+        /// creates an instance to restart the game
+        /// </summary>
+        /// <param name="game"> current game instance </param>
         public Restart(Game game)
         {
             this.game = game;

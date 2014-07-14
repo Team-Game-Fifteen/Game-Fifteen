@@ -4,8 +4,19 @@
     using System.Collections;
     using System.Linq;
 
+    /// <summary>
+    /// game class for instantiating current game
+    /// </summary>
     public class Game
     {
+        /// <summary>
+        /// 
+        /// </summary>
+        private static readonly Game game = new Game();
+
+        /// <summary>
+        /// Initialize game instance
+        /// </summary>
         private Game()
         {
             this.Turn = 0;
@@ -14,10 +25,12 @@
         }
 
         public int Turn { get; private set; }
+
         public Board Board { get; private set; }
+
         public Stack SavedStates { get; private set; }
+
         public bool IsFinished { get; set; }
-        private static readonly Game game = new Game();
 
         public static Game Instance
         {

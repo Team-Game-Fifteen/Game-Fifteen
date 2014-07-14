@@ -5,10 +5,22 @@
     using System.Linq;
     using System.Text.RegularExpressions;
 
+    /// <summary>
+    /// Scores class to work with player's score
+    /// </summary>
     public class TopScores
     {
+        /// <summary>
+        /// number of high scores to be stored
+        /// </summary>
         public const int TOP_SCORES_AMOUNT = 5;
+        /// <summary>
+        /// file to store the top scores data
+        /// </summary>
         public const string TOP_SCORES_FILENAME = "Top.txt";
+        /// <summary>
+        /// defines the way the top scores are written in file
+        /// </summary>
         public const string TOP_SCORES_PERSON_PATTERN = @"^\d+\. (.+) --> (\d+) moves?$";
 
         public static void UpgradeTopScore(Game game)
