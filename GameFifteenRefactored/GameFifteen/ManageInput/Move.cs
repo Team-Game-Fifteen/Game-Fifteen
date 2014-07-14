@@ -19,6 +19,7 @@ namespace GameFifteen.ManageInput
             game.Board.NextMove(cellNumber);
             if (game.Board.IsMatrixOrdered())
             {
+                game.IsFinished = true;
                 ConsoleWriter.PrintFinalGameResult(game);                
             }
         }
