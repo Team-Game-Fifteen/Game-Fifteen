@@ -1,5 +1,6 @@
 ﻿namespace GameFifteen
 {
+    using GameFifteen.ManageInput;
     using System;
     using System.Linq;
 
@@ -21,56 +22,16 @@
         {
             Game game = Game.Instance;
 
-            while (true)
-            {
-                game.LoadTurns();
-                ConsoleWriter.PrintWelcomeMessage();
-                ConsoleWriter.PrintMatrix(game.Board);
-                while (true)
-                {
-                    ConsoleWriter.PrintNextMoveMessage();
-                    string consoleInputLine = Console.ReadLine();
-                    int cellNumber;
-                    if (int.TryParse(consoleInputLine, out cellNumber))
-                    {
-                        game.Board.NextMove(cellNumber);
-                        if (game.Board.IsMatrixOrdered())
-                        {
-                            ConsoleWriter.PrintFinalGameResult(game);
-                            break;
-                        }
-                    }
-                    else
-                    {
-                        if (consoleInputLine == "restart")
-                        {  
-                            game.Restart();
-                            break;   
-                          
-                        }
+            game.LoadTurns();
+            ConsoleWriter.PrintWelcomeMessage();
+            ConsoleWriter.PrintMatrix(game.Board);
+            GameController controller = new GameController(game);
 
-                        switch (consoleInputLine)
-                        {
-                            case "top":
-                                ConsoleWriter.PrintTopScores();
-                                break;
-                            case "exit":
-                                ConsoleWriter.PrintGoodbye();
-                                return;
-                            case "save":
-                                game.SaveState();
-                                ConsoleWriter.PrintStateSaved();
-                                break;
-                            case "restore":
-                                game.RestoreState();
-                                ConsoleWriter.PrintMatrix(game.Board);
-                                break;
-                            default:
-                                ConsoleWriter.PrintIllegalCommandMessage();
-                                break;
-                        }
-                    }
-                }
+            while (!game.IsFinished)
+            {
+                ConsoleWriter.PrintNextMoveMessage();
+                string consoleInputLine = Console.ReadLine();
+                controller.Invoke(consoleInputLine);
             }
         }
     }

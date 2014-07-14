@@ -46,6 +46,8 @@
     <Compile Include="ManageInput\Exit.cs" />
     <Compile Include="ManageInput\ICommand.cs" />
     <Compile Include="ManageInput\GameController.cs" />
+    <Compile Include="ManageInput\Move.cs" />
+    <Compile Include="ManageInput\Restart.cs" />
     <Compile Include="ManageInput\Restore.cs" />
     <Compile Include="ManageInput\Save.cs" />
     <Compile Include="ManageInput\Top.cs" />

@@ -16,6 +16,7 @@
         public int Turn { get; private set; }
         public Board Board { get; private set; }
         public Stack SavedStates { get; private set; }
+        public bool IsFinished { get; set; }
         private static readonly Game game = new Game();
 
         public static Game Instance
