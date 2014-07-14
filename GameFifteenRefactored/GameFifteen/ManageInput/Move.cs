@@ -6,7 +6,7 @@
     /// <summary>
     /// move class to enable game turn
     /// </summary>
-    class Move : ICommand
+    public class Move : ICommand
     {
         /// <summary>
         /// instance of the game to execute move

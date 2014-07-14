@@ -6,7 +6,7 @@
     /// <summary>
     /// restart class for beginning a new game
     /// </summary>
-    class Restart : ICommand
+    public class Restart : ICommand
     {
         /// <summary>
         /// the instance of the game to be restarted

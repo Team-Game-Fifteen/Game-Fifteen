@@ -3,7 +3,7 @@
     using System;
     using System.Linq;
 
-    class Top : ICommand
+    public class Top : ICommand
     {
         public Top()
         {

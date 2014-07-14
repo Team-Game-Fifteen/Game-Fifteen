@@ -3,7 +3,7 @@
     using System;
     using System.Linq;
 
-    class Exit : ICommand
+    public class Exit : ICommand
     {
         private Game game;
 

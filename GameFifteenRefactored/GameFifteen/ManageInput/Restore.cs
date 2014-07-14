@@ -6,7 +6,7 @@
     /// <summary>
     /// restore class for loading a game
     /// </summary>
-    class Restore : ICommand
+    public class Restore : ICommand
     {
         /// <summary>
         /// instance of a game to restore
