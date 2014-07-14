@@ -10,17 +10,8 @@
     /// </summary>
     public class TopScores
     {
-        /// <summary>
-        /// number of high scores to be stored
-        /// </summary>
         public const int TOP_SCORES_AMOUNT = 5;
-        /// <summary>
-        /// file to store the top scores data
-        /// </summary>
         public const string TOP_SCORES_FILENAME = "Top.txt";
-        /// <summary>
-        /// defines the way the top scores are written in file
-        /// </summary>
         public const string TOP_SCORES_PERSON_PATTERN = @"^\d+\. (.+) --> (\d+) moves?$";
 
         public static void UpgradeTopScore(Game game)
@@ -28,10 +19,10 @@
             string[] topScores = GetTopScoresFromFile();
             Console.Write("Please enter your name for the top scoreboard: ");
             string name = Console.ReadLine();
-            // if (name == string.Empty) //Moved to PersonalScore.cs
-            // {
-            //     name = "Anonymous";
-            // }
+            //// if (name == string.Empty) //Moved to PersonalScore.cs
+            //// {
+            ////     name = "Anonymous";
+            //// }
 
             topScores[TOP_SCORES_AMOUNT] = string.Format("0. {0} --> {1} move", name, game.Turn);
             Array.Sort(topScores);

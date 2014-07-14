@@ -1,8 +1,8 @@
-﻿using System;
-using System.Linq;
-
-namespace GameFifteen.ManageInput
+﻿namespace GameFifteen.ManageInput
 {
+    using System;
+    using System.Linq;
+
     /// <summary>
     /// restore class for loading a game
     /// </summary>
@@ -14,7 +14,7 @@ namespace GameFifteen.ManageInput
         private Game game;
 
         /// <summary>
-        /// creates an instance to restore the game
+        /// Initializes a new instance of the <see cref="Restore"/> class.
         /// </summary>
         /// <param name="game"> the game to be restored </param>
         public Restore(Game game)
@@ -24,8 +24,8 @@ namespace GameFifteen.ManageInput
 
         public void Execute(params object[] list)
         {
-            game.RestoreState();
-            ConsoleWriter.PrintMatrix(game.Board);
+            this.game.RestoreState();
+            ConsoleWriter.PrintMatrix(this.game.Board);
         }
     }
 }

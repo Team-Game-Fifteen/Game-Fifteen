@@ -1,8 +1,8 @@
-﻿using System;
-using System.Linq;
-
-namespace GameFifteen.ManageInput
+﻿namespace GameFifteen.ManageInput
 {
+    using System;
+    using System.Linq;
+
     /// <summary>
     /// move class to enable game turn
     /// </summary>
@@ -14,7 +14,7 @@ namespace GameFifteen.ManageInput
         private Game game;
 
         /// <summary>
-        /// creates an instance to execute moves
+        /// Initializes a new instance of the <see cref="Move"/> class.
         /// </summary>
         /// <param name="game"> the game instance </param>
         public Move(Game game)
@@ -26,11 +26,11 @@ namespace GameFifteen.ManageInput
         {
             int cellNumber = (int)list[0];
 
-            game.Board.NextMove(cellNumber);
-            if (game.Board.IsMatrixOrdered())
+            this.game.Board.NextMove(cellNumber);
+            if (this.game.Board.IsMatrixOrdered())
             {
-                game.IsFinished = true;
-                ConsoleWriter.PrintFinalGameResult(game);                
+                this.game.IsFinished = true;
+                ConsoleWriter.PrintFinalGameResult(this.game);                
             }
         }
     }

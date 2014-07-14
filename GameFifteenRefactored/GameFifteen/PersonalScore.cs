@@ -18,7 +18,7 @@
         private int userScore;
 
         /// <summary>
-        /// creates an instance of the player's score
+        /// Initializes a new instance of the <see cref="PersonalScore"/> struct.
         /// </summary>
         /// <param name="name"> name of the player </param>
         /// <param name="score"> player score </param>

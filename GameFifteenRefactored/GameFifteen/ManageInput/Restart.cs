@@ -4,7 +4,7 @@
     using System.Linq;
 
     /// <summary>
-    /// restart class for begining a new game
+    /// restart class for beginning a new game
     /// </summary>
     class Restart : ICommand
     {
@@ -14,7 +14,7 @@
         private Game game;
 
         /// <summary>
-        /// creates an instance to restart the game
+        /// Initializes a new instance of the <see cref="Restart"/> class.
         /// </summary>
         /// <param name="game"> current game instance </param>
         public Restart(Game game)
@@ -24,9 +24,9 @@
 
         public void Execute(params object[] list)
         {
-            game.Restart();
+            this.game.Restart();
             ConsoleWriter.PrintWelcomeMessage();
-            ConsoleWriter.PrintMatrix(game.Board);
+            ConsoleWriter.PrintMatrix(this.game.Board);
         }
     }
 }

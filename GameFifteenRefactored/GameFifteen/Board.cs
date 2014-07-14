@@ -25,26 +25,24 @@
         private readonly int[] directionColumn = { 0, 1, 0, -1 };
 
         /// <summary>
-        ///
-        /// </summary>
-        public event EventHandler<MovePerformedEventArgs> MovePerformed;
-
-        /// <summary>
         /// instance of a random generator
         /// </summary>
         private readonly Random random = new Random();
-               
+
         /// <summary>
-        /// creates initial instance of the board
+        /// Initializes a new instance of the <see cref="Board"/> class.
         /// </summary>
         public Board()
         {
             this.InitializeMatrix();
         }
 
+        public event EventHandler<MovePerformedEventArgs> MovePerformed;
+
         public string[,] Matrix { get; private set; } 
 
         public int EmptyCellRow { get; private set; }
+
         public int EmptyCellColumn { get; private set; }
 
         public bool CheckIfCellIsValid(int direction)
@@ -113,26 +111,6 @@
             this.EmptyCellRow = state.EmptyCellRow;
         }
 
-        private void InitializeMatrix()
-        {
-            this.Matrix = new string[MATRIX_SIZE_ROWS, MATRIX_SIZE_COLUMNS];
-            int cellValue = 1;
-
-            for (int row = 0; row < MATRIX_SIZE_ROWS; row++)
-            {
-                for (int column = 0; column < MATRIX_SIZE_COLUMNS; column++)
-                {
-                    this.Matrix[row, column] = cellValue.ToString();
-                    cellValue++;
-                }
-            }
-
-            this.EmptyCellRow = MATRIX_SIZE_ROWS - 1;
-            this.EmptyCellColumn = MATRIX_SIZE_COLUMNS - 1;
-            this.Matrix[this.EmptyCellRow, this.EmptyCellColumn] = EMPTY_CELL_VALUE;
-            this.ShuffleMatrix();  
-        }
-        
         public void ShuffleMatrix()
         {
             int matrixSize = MATRIX_SIZE_ROWS * MATRIX_SIZE_COLUMNS;
@@ -150,6 +128,26 @@
             {
                 this.ShuffleMatrix();
             }
+        }
+
+        private void InitializeMatrix()
+        {
+            this.Matrix = new string[MATRIX_SIZE_ROWS, MATRIX_SIZE_COLUMNS];
+            int cellValue = 1;
+
+            for (int row = 0; row < MATRIX_SIZE_ROWS; row++)
+            {
+                for (int column = 0; column < MATRIX_SIZE_COLUMNS; column++)
+                {
+                    this.Matrix[row, column] = cellValue.ToString();
+                    cellValue++;
+                }
+            }
+
+            this.EmptyCellRow = MATRIX_SIZE_ROWS - 1;
+            this.EmptyCellColumn = MATRIX_SIZE_COLUMNS - 1;
+            this.Matrix[this.EmptyCellRow, this.EmptyCellColumn] = EMPTY_CELL_VALUE;
+            this.ShuffleMatrix();
         }
 
         private void MoveCell(int direction)

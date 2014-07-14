@@ -1,8 +1,8 @@
-﻿using System;
-using System.Linq;
-
-namespace GameFifteen.ManageInput
+﻿namespace GameFifteen.ManageInput
 {
+    using System;
+    using System.Linq;
+
     public interface ICommand
     {
         void Execute(params object[] list);

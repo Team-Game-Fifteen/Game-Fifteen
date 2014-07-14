@@ -102,6 +102,7 @@
         /// This method prints on the console all the information the player needs after beating the game.
         /// Number of moves he made, the top score list and if the player was able to get on the top score list.
         /// </summary>
+        /// <param name="game"> game instance </param>
         internal static void PrintFinalGameResult(Game game)
         {
             string moves = game.Turn == 1 ? "1 move" : string.Format("{0} moves", game.Turn);

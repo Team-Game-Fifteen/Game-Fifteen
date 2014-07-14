@@ -1,8 +1,8 @@
 ﻿namespace GameFifteen
 {
-    using GameFifteen.ManageInput;
     using System;
     using System.Linq;
+    using GameFifteen.ManageInput;
 
     /// <summary>
     /// GameFifteenEngine is our "main" class. Here we make instances of the public classes and call the public 

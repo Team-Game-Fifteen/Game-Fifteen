@@ -1,8 +1,8 @@
-﻿using System;
-using System.Linq;
-
-namespace GameFifteen.ManageInput
+﻿namespace GameFifteen.ManageInput
 {
+    using System;
+    using System.Linq;
+
     public class Save : ICommand
     {
         /// <summary>
@@ -11,7 +11,7 @@ namespace GameFifteen.ManageInput
         private Game game;
 
         /// <summary>
-        /// creates an instance to save the game
+        /// Initializes a new instance of the <see cref="Save"/> class.
         /// </summary>
         /// <param name="game"> the game to be saved </param>
         public Save(Game game)

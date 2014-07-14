@@ -9,19 +9,24 @@
     /// </summary>
     public class Game
     {
-        /// <summary>
-        /// 
-        /// </summary>
-        private static readonly Game game = new Game();
+        private static readonly Game GameInstance = new Game();
 
         /// <summary>
-        /// Initialize game instance
+        /// Prevents a default instance of the <see cref="Game"/> class from being created.
         /// </summary>
         private Game()
         {
             this.Turn = 0;
             this.Board = new Board();
             this.SavedStates = new Stack();
+        }
+
+        public static Game Instance
+        {
+            get
+            {
+                return GameInstance;
+            }
         }
 
         public int Turn { get; private set; }
@@ -31,14 +36,6 @@
         public Stack SavedStates { get; private set; }
 
         public bool IsFinished { get; set; }
-
-        public static Game Instance
-        {
-            get
-            {
-                return game;
-            }
-        }
 
         public void Restart()
         {
@@ -74,7 +71,7 @@
         private void UpdateTurns(object sender, MovePerformedEventArgs e)
         {
             this.Turn++;
-          // Console.WriteLine(this.Turn);
+            //// Console.WriteLine(this.Turn);
         }
     }
 }

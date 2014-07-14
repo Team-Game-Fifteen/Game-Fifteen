@@ -1,9 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-
-namespace GameFifteen.ManageInput
+﻿namespace GameFifteen.ManageInput
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+
     public class GameController
     {
         /// <summary>
@@ -12,9 +12,9 @@ namespace GameFifteen.ManageInput
         public Dictionary<string, ICommand> commands = new Dictionary<string, ICommand>();
 
         /// <summary>
-        /// creates a class to store all possible user commands
+        /// Initializes a new instance of the <see cref="GameController"/> class.
         /// </summary>
-        /// <param name="game"></param>
+        /// <param name="game"> the game instance </param>
         public GameController(Game game)
         {
             this.commands.Add("top", new Top());
@@ -36,12 +36,12 @@ namespace GameFifteen.ManageInput
 
             if (int.TryParse(consoleInputLine, out cellNumber))
             {
-                newCommand = commands["move"];
+                newCommand = this.commands["move"];
                 newCommand.Execute(cellNumber);                
             }
             else if (this.commands.ContainsKey(consoleInputLine))
             {
-                newCommand = commands[consoleInputLine];
+                newCommand = this.commands[consoleInputLine];
                 newCommand.Execute();
             }
             else
