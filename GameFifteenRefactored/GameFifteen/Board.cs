@@ -33,7 +33,7 @@
 
         }
 
-        public string[,] Matrix { get; private set; } // encapsulate it
+        public string[,] Matrix { get; private set; } 
         public int EmptyCellRow { get; private set; }
         public int EmptyCellColumn { get; private set; }
 
@@ -50,24 +50,6 @@
             return isCellValid;
         }
 
-        public void ShuffleMatrix()
-        {
-            int matrixSize = MatrixSizeRows * MatrixSizeColumns;
-            int shuffles = this.random.Next(matrixSize, matrixSize * 100);
-            for (int i = 0; i < shuffles; i++)
-            {
-                int direction = this.random.Next(this.DirectionRow.Length);
-                if (this.CheckIfCellIsValid(direction))
-                {
-                    this.MoveCell(direction);
-                }
-            }
-
-            if (this.IsMatrixOrdered())
-            {
-                this.ShuffleMatrix();
-            }
-        }
 
         public void NextMove(int cellNumber)
         {
@@ -139,6 +121,26 @@
             this.EmptyCellRow = MatrixSizeRows - 1;
             this.EmptyCellColumn = MatrixSizeColumns - 1;
             this.Matrix[this.EmptyCellRow, this.EmptyCellColumn] = EmptyCellValue;
+            this.ShuffleMatrix();  
+        }
+        
+        private void ShuffleMatrix()
+        {
+            int matrixSize = MatrixSizeRows * MatrixSizeColumns;
+            int shuffles = this.random.Next(matrixSize, matrixSize * 100);
+            for (int i = 0; i < shuffles; i++)
+            {
+                int direction = this.random.Next(this.DirectionRow.Length);
+                if (this.CheckIfCellIsValid(direction))
+                {
+                    this.MoveCell(direction);
+                }
+            }
+
+            if (this.IsMatrixOrdered())
+            {
+                this.ShuffleMatrix();
+            }
         }
 
         private void MoveCell(int direction)

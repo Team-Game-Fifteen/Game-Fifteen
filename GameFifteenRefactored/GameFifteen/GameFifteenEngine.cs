@@ -22,53 +22,48 @@
             Game game = new Game();
             game.LoadTurns();
 
+            ConsoleWriter.PrintWelcomeMessage();
+            ConsoleWriter.PrintMatrix(game.Board);
             while (true)
             {
-                game.Board.ShuffleMatrix();
-                
-                ConsoleWriter.PrintWelcomeMessage();
-                ConsoleWriter.PrintMatrix(game.Board);
-                while (true)
+                ConsoleWriter.PrintNextMoveMessage();
+                string consoleInputLine = Console.ReadLine();
+                int cellNumber;
+                if (int.TryParse(consoleInputLine, out cellNumber))
                 {
-                    ConsoleWriter.PrintNextMoveMessage();
-                    string consoleInputLine = Console.ReadLine();
-                    int cellNumber;
-                    if (int.TryParse(consoleInputLine, out cellNumber))
+                    game.Board.NextMove(cellNumber);
+                    if (game.Board.IsMatrixOrdered())
                     {
-                        game.Board.NextMove(cellNumber);
-                        if (game.Board.IsMatrixOrdered())
-                        {
-                            ConsoleWriter.PrintFinalGameResult(game);
-                            break;
-                        }
+                        ConsoleWriter.PrintFinalGameResult(game);
+                        break;
                     }
-                    else
+                }
+                else
+                {
+                    if (consoleInputLine == "restart")
                     {
-                        if (consoleInputLine == "restart")
-                        {
-                            break;
-                        }
+                        break;
+                    }
 
-                        switch (consoleInputLine)
-                        {
-                            case "top":
-                                ConsoleWriter.PrintTopScores();
-                                break;
-                            case "exit":
-                                ConsoleWriter.PrintGoodbye();
-                                return;
-                            case "save":
-                                game.SaveState();
-                                ConsoleWriter.PrintStateSaved();
-                                break;
-                            case "restore":
-                                game.RestoreState();
-                                ConsoleWriter.PrintMatrix(game.Board);
-                                break;
-                            default:
-                                ConsoleWriter.PrintIllegalCommandMessage();
-                                break;
-                        }
+                    switch (consoleInputLine)
+                    {
+                        case "top":
+                            ConsoleWriter.PrintTopScores();
+                            break;
+                        case "exit":
+                            ConsoleWriter.PrintGoodbye();
+                            return;
+                        case "save":
+                            game.SaveState();
+                            ConsoleWriter.PrintStateSaved();
+                            break;
+                        case "restore":
+                            game.RestoreState();
+                            ConsoleWriter.PrintMatrix(game.Board);
+                            break;
+                        default:
+                            ConsoleWriter.PrintIllegalCommandMessage();
+                            break;
                     }
                 }
             }

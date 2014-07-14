@@ -45,6 +45,7 @@
         private void UpdateTurns(object sender, MovePerformedEventArgs e)
         {
             this.Turn++;
+          //  Console.WriteLine(this.Turn);
         }
     }
 }
