@@ -9,7 +9,7 @@
         public const int MATRIX_SIZE_COLUMNS = 4;
         public const int MATRIX_SIZE = MATRIX_SIZE_ROWS * MATRIX_SIZE_COLUMNS;
 
-        private const string EmptyCellValue = " ";
+        private const string EMPTY_CELL_VALUE = " ";
         private readonly int[] directionRow = { -1, 0, 1, 0 };
         private readonly int[] directionColumn = { 0, 1, 0, -1 };
 
@@ -109,7 +109,7 @@
 
             this.EmptyCellRow = MATRIX_SIZE_ROWS - 1;
             this.EmptyCellColumn = MATRIX_SIZE_COLUMNS - 1;
-            this.Matrix[this.EmptyCellRow, this.EmptyCellColumn] = EmptyCellValue;
+            this.Matrix[this.EmptyCellRow, this.EmptyCellColumn] = EMPTY_CELL_VALUE;
             this.ShuffleMatrix();  
         }
         
@@ -137,7 +137,7 @@
             int nextCellRow = this.EmptyCellRow + this.directionRow[direction];
             int nextCellColumn = this.EmptyCellColumn + this.directionColumn[direction];
             this.Matrix[this.EmptyCellRow, this.EmptyCellColumn] = this.Matrix[nextCellRow, nextCellColumn];
-            this.Matrix[nextCellRow, nextCellColumn] = EmptyCellValue;
+            this.Matrix[nextCellRow, nextCellColumn] = EMPTY_CELL_VALUE;
             this.EmptyCellRow = nextCellRow;
             this.EmptyCellColumn = nextCellColumn;
         }
