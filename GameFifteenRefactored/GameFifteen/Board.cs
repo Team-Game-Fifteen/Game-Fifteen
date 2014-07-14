@@ -62,14 +62,14 @@
         {
             if (cellNumber <= 0 || cellNumber >= MATRIX_SIZE)
             {
-                ConsoleWriter.PrintCellDoesNotExistMessage();
+                ConsoleWriter.PrintMessage("That cell does not exist in the matrix.");
                 return;
             }
 
             int direction = this.CellNumberToDirection(cellNumber);
             if (direction == -1)
             {
-                ConsoleWriter.PrintIllegalMoveMessage();
+                ConsoleWriter.PrintMessage("Illegal move!");
                 return;
             }
 

@@ -10,39 +10,9 @@
     /// </summary>
     public static class ConsoleWriter
     {
-        internal static void PrintCellDoesNotExistMessage()
+        internal static void PrintMessage(string message)
         {
-            Console.WriteLine("That cell does not exist in the matrix.");
-        }
-
-        internal static void PrintGoodbye()
-        {
-            Console.WriteLine("Good bye!");
-        }
-
-        internal static void PrintIllegalCommandMessage()
-        {
-            Console.WriteLine("Illegal command!");
-        }
-
-        internal static void PrintIllegalMoveMessage()
-        {
-            Console.WriteLine("Illegal move!");
-        }
-
-        internal static void PrintStateSaved()
-        {
-            Console.WriteLine("The current state is saved");
-        }
-
-        internal static void PrintNoSavedStateMessage()
-        {
-            Console.WriteLine("There is no state to be restored!");
-        }
-
-        internal static void PrintNextMoveMessage()
-        {
-            Console.Write("Enter a number to move: ");
+            Console.WriteLine(message);
         }
 
         internal static void PrintMatrix(Board board)

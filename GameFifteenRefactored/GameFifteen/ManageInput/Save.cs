@@ -22,7 +22,7 @@
         public void Execute(params object[] list)
         {
             this.game.SaveState();
-            ConsoleWriter.PrintStateSaved();
+            ConsoleWriter.PrintMessage("The current state is saved");
         }
     }
 }

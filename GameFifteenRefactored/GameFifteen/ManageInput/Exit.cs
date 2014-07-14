@@ -3,7 +3,7 @@
     using System;
     using System.Linq;
 
-    public class Exit : ICommand
+    class Exit : ICommand
     {
         private Game game;
 
@@ -15,7 +15,7 @@
         public void Execute(params object[] list)
         {
             this.game.IsFinished = true;
-            ConsoleWriter.PrintGoodbye();
+            ConsoleWriter.PrintMessage("Good bye!");
         }
     }
 }

@@ -46,7 +46,7 @@
             }
             else
             {
-                ConsoleWriter.PrintIllegalCommandMessage();
+                ConsoleWriter.PrintMessage("Illegal command!");
             }
         }
     }
