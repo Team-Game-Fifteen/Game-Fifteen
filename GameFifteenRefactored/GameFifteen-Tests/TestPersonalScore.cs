@@ -1,13 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using NUnit.Framework;
-using GameFifteen;
-
-namespace GameFifteen_Tests
+﻿namespace GameFifteen_Tests
 {
+    using System;
+    using System.Linq;
+    using GameFifteen;
+    using NUnit.Framework;
+
     [TestFixture]
     public class TestPersonalScore
     {

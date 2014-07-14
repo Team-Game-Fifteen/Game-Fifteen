@@ -1,16 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.IO;
-using System.Text;
-using System.Threading.Tasks;
-using NUnit.Framework;
-using GameFifteen;
-
-namespace GameFifteen_Tests
+﻿namespace GameFifteen_Tests
 {
+    using System;
+    using System.IO;
+    using System.Linq;
+    using GameFifteen;
+    using NUnit.Framework;
+
     [TestFixture]
-    class TestScore
+    public class TestScore
     {
         [Test]
         public void TestGetTopScoresFromFile()
