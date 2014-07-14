@@ -15,19 +15,9 @@
 
         public event EventHandler<MovePerformedEventArgs> MovePerformed;
 
-        private static readonly Board board = new Board();
-
         private readonly Random random = new Random();
                
-        public static Board Instance
-        {
-            get
-            {
-                return board;
-            }
-        }
-
-        private Board()
+        public Board()
         {
             this.InitializeMatrix();
         }

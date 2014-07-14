@@ -6,16 +6,32 @@
 
     public class Game
     {
-        public Game()
+        private Game()
         {
             this.Turn = 0;
-            this.Board = Board.Instance;
+            this.Board = new Board();
             this.SavedStates = new Stack();
         }
 
         public int Turn { get; private set; }
         public Board Board { get; private set; }
         public Stack SavedStates { get; private set; }
+        private static readonly Game game = new Game();
+
+        public static Game Instance
+        {
+            get
+            {
+                return game;
+            }
+        }
+
+        public void Restart()
+        {
+            this.Turn = 0;
+            this.Board = new Board();
+            this.SavedStates = new Stack();
+        }
 
         public void SaveState()
         {
