@@ -94,7 +94,8 @@
             Console.Write("Welcome to the game \"15\". ");
             Console.WriteLine("Please try to arrange the numbers sequentially. ");
             Console.WriteLine("Use 'top' to view the top scoreboard, " +
-                              "'restart' to start a new game and 'exit'  to quit the game.");
+                              "'save' to save the current state, 'restore' to restore a saved state (you can save many states), " +
+                              "'restart' to start a new game and 'exit' to quit the game.");
         }
 
         /// <summary>
