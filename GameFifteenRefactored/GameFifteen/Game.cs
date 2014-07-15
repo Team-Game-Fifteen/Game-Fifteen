@@ -22,7 +22,7 @@
         }
 
         /// <summary>
-        /// Instance of the Game class.
+        /// Gets instance of the Game class.
         /// </summary>
         public static Game Instance
         {
@@ -83,7 +83,8 @@
         private void UpdateTurns(object sender, MovePerformedEventArgs e)
         {
             this.Turn++;
-            //Console.WriteLine(this.Turn);
+
+            // Console.WriteLine(this.Turn);
         }
     }
 }

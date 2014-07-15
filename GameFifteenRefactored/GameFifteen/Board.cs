@@ -164,7 +164,7 @@
         }
 
         /// <summary>
-        /// Counts the turns made by the plaer.
+        /// Counts the turns made by the player.
         /// </summary>
         private void OnMovePerformed()
         {

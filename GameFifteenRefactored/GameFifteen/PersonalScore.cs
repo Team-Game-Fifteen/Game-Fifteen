@@ -8,12 +8,12 @@
     public struct PersonalScore
     {
         /// <summary>
-        ///The name of the player.
+        /// The name of the player.
         /// </summary>
         private string userName;
 
         /// <summary>
-        ///The score of the player.
+        /// The score of the player.
         /// </summary>
         private int userScore;
 
