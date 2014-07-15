@@ -3,6 +3,9 @@
     using System;
     using System.Linq;
 
+    /// <summary>
+    /// Top class for printing top list of players.
+    /// </summary>
     public class Top : ICommand
     {
         public Top()

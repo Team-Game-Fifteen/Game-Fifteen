@@ -1,0 +1,295 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<HelpKI>
+  <HelpKINode Title="Board class">
+    <HelpKINode Title="Board Class" Url="html/56ff77d9-5324-a890-aa3c-b24d94cfe53a.htm" />
+    <HelpKINode Title="about Board class" Url="html/56ff77d9-5324-a890-aa3c-b24d94cfe53a.htm" />
+    <HelpKINode Title="constructor" Url="html/43319e7c-d881-aa21-71e9-92b3b26ef946.htm" />
+    <HelpKINode Title="events" Url="html/e51ae74a-7dc2-ab28-d9e5-b9a186b4c873.htm" />
+    <HelpKINode Title="fields" Url="html/e173d9a1-fe94-f8af-a693-a0ca9c9b886e.htm" />
+    <HelpKINode Title="methods" Url="html/c04fdae4-014e-7a4a-7102-d2f28c4b4a4f.htm" />
+    <HelpKINode Title="properties" Url="html/a14e2489-0814-4d74-e4a7-769086852498.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Board property" Url="html/ab403d26-1f54-f47a-e972-c4590bef9294.htm" />
+  <HelpKINode Title="Board.Board constructor" Url="html/43319e7c-d881-aa21-71e9-92b3b26ef946.htm" />
+  <HelpKINode Title="Board.CellNumberToDirection method" Url="html/7c08fa6c-ff3d-42e6-fee1-0a122958a58b.htm" />
+  <HelpKINode Title="Board.CheckIfCellIsValid method" Url="html/549d3f0b-dca1-9141-5e95-9f26ec86aebb.htm" />
+  <HelpKINode Title="Board.directionColumn field" Url="html/b885ebb4-6dcb-7520-57ba-d1410c1db228.htm" />
+  <HelpKINode Title="Board.directionRow field" Url="html/56e38e96-8cfe-f436-661f-219fd9e40928.htm" />
+  <HelpKINode Title="Board.EmptyCellColumn property" Url="html/ae7d5df6-90d3-bca3-c538-ee73672320a6.htm" />
+  <HelpKINode Title="Board.EmptyCellRow property" Url="html/1139a83c-34ff-e08d-f678-b2e8973ad29e.htm" />
+  <HelpKINode Title="Board.EMPTY_CELL_VALUE field" Url="html/82862531-9b34-8788-fa7a-cf02e759a86b.htm" />
+  <HelpKINode Title="Board.InitializeMatrix method" Url="html/d72041f5-3e04-ad32-c24b-fb403aebdb9f.htm" />
+  <HelpKINode Title="Board.IsMatrixOrdered method" Url="html/720d16d2-667f-54cb-e486-3999ee3def5d.htm" />
+  <HelpKINode Title="Board.Matrix property" Url="html/5470a7b6-983f-cb5d-629a-e93525038500.htm" />
+  <HelpKINode Title="Board.MATRIX_SIZE field" Url="html/14125bc5-72f4-15d9-fb82-9cad61b3a84f.htm" />
+  <HelpKINode Title="Board.MATRIX_SIZE_COLUMNS field" Url="html/8fcafff9-f5d0-e0e9-af78-7a216fd3653a.htm" />
+  <HelpKINode Title="Board.MATRIX_SIZE_ROWS field" Url="html/4fe605cb-9688-8a4d-ccdf-9ebcc2c57714.htm" />
+  <HelpKINode Title="Board.MoveCell method" Url="html/7d76de4e-232a-e75e-c8fc-9c2992c8b6f4.htm" />
+  <HelpKINode Title="Board.MovePerformed event" Url="html/01e0f2ea-6631-f150-0f44-0419595e2282.htm" />
+  <HelpKINode Title="Board.NextMove method" Url="html/ecabee31-fc57-e4df-44f1-f52436e0e5f3.htm" />
+  <HelpKINode Title="Board.OnMovePerformed method" Url="html/9388e3f3-de10-9ef1-6826-56d8a2432170.htm" />
+  <HelpKINode Title="Board.random field" Url="html/acff7b1a-22f5-dc17-533d-6483cb13b5c0.htm" />
+  <HelpKINode Title="Board.ResetBoard method" Url="html/30f48b6d-2c36-8d76-d7d7-10efb7318238.htm" />
+  <HelpKINode Title="Board.ShuffleMatrix method" Url="html/616c3909-9d23-e9b7-89b2-83a5796b4c5a.htm" />
+  <HelpKINode Title="CellNumberToDirection method" Url="html/7c08fa6c-ff3d-42e6-fee1-0a122958a58b.htm" />
+  <HelpKINode Title="CheckIfCellIsValid method" Url="html/549d3f0b-dca1-9141-5e95-9f26ec86aebb.htm" />
+  <HelpKINode Title="Commands field" Url="html/459e3453-46c9-b669-bdcf-f980fe6c0fc8.htm" />
+  <HelpKINode Title="ConsoleWriter class">
+    <HelpKINode Title="ConsoleWriter Class" Url="html/35c7f0ed-a34d-1121-1673-f3122037abde.htm" />
+    <HelpKINode Title="about ConsoleWriter class" Url="html/35c7f0ed-a34d-1121-1673-f3122037abde.htm" />
+    <HelpKINode Title="methods" Url="html/20400d71-4b6d-470b-eeda-306921aced17.htm" />
+  </HelpKINode>
+  <HelpKINode Title="ConsoleWriter.PrintFinalGameResult method" Url="html/f32fedd8-19de-8169-5f25-18b56579dbaf.htm" />
+  <HelpKINode Title="ConsoleWriter.PrintMatrix method" Url="html/3b8aa7f5-854e-0103-1b8c-4b6d79ec9bb3.htm" />
+  <HelpKINode Title="ConsoleWriter.PrintMessage method" Url="html/26bfc5b0-3a4a-2359-6001-4e8585f81486.htm" />
+  <HelpKINode Title="ConsoleWriter.PrintTopScores method" Url="html/a9dc5795-4db8-53a7-b7dc-56504a29ef20.htm" />
+  <HelpKINode Title="ConsoleWriter.PrintWelcomeMessage method" Url="html/9a35e1bd-33cc-f3cc-fc5b-6ce8bbc4d990.htm" />
+  <HelpKINode Title="directionColumn field" Url="html/b885ebb4-6dcb-7520-57ba-d1410c1db228.htm" />
+  <HelpKINode Title="directionRow field" Url="html/56e38e96-8cfe-f436-661f-219fd9e40928.htm" />
+  <HelpKINode Title="EmptyCellColumn property">
+    <HelpKINode Title="Board.EmptyCellColumn Property " Url="html/ae7d5df6-90d3-bca3-c538-ee73672320a6.htm" />
+    <HelpKINode Title="State.EmptyCellColumn Property " Url="html/0afb8e47-9eb3-fe04-2ab3-026f10109f39.htm" />
+  </HelpKINode>
+  <HelpKINode Title="EmptyCellRow property">
+    <HelpKINode Title="Board.EmptyCellRow Property " Url="html/1139a83c-34ff-e08d-f678-b2e8973ad29e.htm" />
+    <HelpKINode Title="State.EmptyCellRow Property " Url="html/d798afc8-67c3-7a32-b330-6fa0c89e1ab3.htm" />
+  </HelpKINode>
+  <HelpKINode Title="EMPTY_CELL_VALUE field" Url="html/82862531-9b34-8788-fa7a-cf02e759a86b.htm" />
+  <HelpKINode Title="Execute method">
+    <HelpKINode Title="Exit.Execute Method " Url="html/b3a9b5c1-7532-6698-9abd-1e49df8550b9.htm" />
+    <HelpKINode Title="ICommand.Execute Method " Url="html/9a3f52bb-c6b5-75f4-246d-f990bb6edb51.htm" />
+    <HelpKINode Title="Move.Execute Method " Url="html/1c6e8f69-90e5-b93e-e3c9-8c0229c2c391.htm" />
+    <HelpKINode Title="Restart.Execute Method " Url="html/7fdcd746-bf5d-3013-e823-93741955e844.htm" />
+    <HelpKINode Title="Restore.Execute Method " Url="html/51fb1d9b-7bf8-45e6-acff-89042b154897.htm" />
+    <HelpKINode Title="Save.Execute Method " Url="html/873e0033-ffc7-119f-d732-64eda76abd4b.htm" />
+    <HelpKINode Title="Top.Execute Method " Url="html/d285684c-6979-390d-8868-8e0089c59c1a.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Exit class">
+    <HelpKINode Title="Exit Class" Url="html/c5ef0aa5-0fe3-88e1-af33-cf4fe9481720.htm" />
+    <HelpKINode Title="about Exit class" Url="html/c5ef0aa5-0fe3-88e1-af33-cf4fe9481720.htm" />
+    <HelpKINode Title="constructor" Url="html/45bbc394-1e79-239a-d0d9-fb0bc5ac4244.htm" />
+    <HelpKINode Title="fields" Url="html/e435aa9b-ed09-be3a-52fd-128fab234e02.htm" />
+    <HelpKINode Title="methods" Url="html/820b7c94-f939-441c-a82d-023b0505ed11.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Exit.Execute method" Url="html/b3a9b5c1-7532-6698-9abd-1e49df8550b9.htm" />
+  <HelpKINode Title="Exit.Exit constructor" Url="html/45bbc394-1e79-239a-d0d9-fb0bc5ac4244.htm" />
+  <HelpKINode Title="Exit.game field" Url="html/eaddf2cc-b635-e0f4-8b0c-1c1aebdec8c1.htm" />
+  <HelpKINode Title="Game class">
+    <HelpKINode Title="Game Class" Url="html/581ccd04-1cb1-9968-7e5f-a036bda3286e.htm" />
+    <HelpKINode Title="about Game class" Url="html/581ccd04-1cb1-9968-7e5f-a036bda3286e.htm" />
+    <HelpKINode Title="constructor" Url="html/2c005c53-f8f6-976a-af2c-eff6383387a5.htm" />
+    <HelpKINode Title="constructor" Url="html/d6fa189d-09fa-aad2-bb1b-94ef7a842a29.htm" />
+    <HelpKINode Title="fields" Url="html/901fff42-41e2-ca19-828d-75ee0ab19342.htm" />
+    <HelpKINode Title="methods" Url="html/c570e15e-bde1-9063-ff03-7cb1322b747c.htm" />
+    <HelpKINode Title="properties" Url="html/20e91396-8368-a310-f0fa-8c14adf6c5d0.htm" />
+  </HelpKINode>
+  <HelpKINode Title="game field">
+    <HelpKINode Title="Exit.game Field" Url="html/eaddf2cc-b635-e0f4-8b0c-1c1aebdec8c1.htm" />
+    <HelpKINode Title="Move.game Field" Url="html/40e7b54a-a9f8-6c5b-0b04-2fa9348234c2.htm" />
+    <HelpKINode Title="Restart.game Field" Url="html/5488b881-7851-130d-7dbc-938cd7c99370.htm" />
+    <HelpKINode Title="Restore.game Field" Url="html/f23047b0-7252-ee7e-68d4-46c1666eb40d.htm" />
+    <HelpKINode Title="Save.game Field" Url="html/4baf2021-2e69-0c60-b03f-1d173a46ce8a.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Game.Board property" Url="html/ab403d26-1f54-f47a-e972-c4590bef9294.htm" />
+  <HelpKINode Title="Game.Game constructor">
+    <HelpKINode Title="Game Constructor " Url="html/d6fa189d-09fa-aad2-bb1b-94ef7a842a29.htm" />
+    <HelpKINode Title="Game Constructor " Url="html/2c005c53-f8f6-976a-af2c-eff6383387a5.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Game.GameInstance field" Url="html/e0c0217e-66ae-4332-b4e4-caf1ef1a92c3.htm" />
+  <HelpKINode Title="Game.Instance property" Url="html/cd9478c7-1d34-9d8f-b123-3bb8f896116e.htm" />
+  <HelpKINode Title="Game.IsFinished property" Url="html/be79064f-38fb-3d79-7a21-970bd172d13c.htm" />
+  <HelpKINode Title="Game.LoadTurns method" Url="html/b7d9e7a7-b8c0-e4ff-14f7-23b9973df25a.htm" />
+  <HelpKINode Title="Game.Restart method" Url="html/1286816e-690e-73ed-ba83-18114aa0d3a0.htm" />
+  <HelpKINode Title="Game.RestoreState method" Url="html/5b492f92-b33f-5764-65d0-1572d32821a3.htm" />
+  <HelpKINode Title="Game.SavedStates property" Url="html/bd00a02f-95a1-fe2d-fb06-a89a7dcb77df.htm" />
+  <HelpKINode Title="Game.SaveState method" Url="html/ee31fcba-ad07-bfea-0aaf-f5b6712cf043.htm" />
+  <HelpKINode Title="Game.Turn property" Url="html/8667751c-fea4-e5f8-6a62-67df180f58e7.htm" />
+  <HelpKINode Title="Game.UpdateTurns method" Url="html/687bd538-13ce-0abe-8e56-36b809b4ef63.htm" />
+  <HelpKINode Title="GameController class">
+    <HelpKINode Title="GameController Class" Url="html/ad369301-fdcb-faef-9b27-47614c86c7cd.htm" />
+    <HelpKINode Title="about GameController class" Url="html/ad369301-fdcb-faef-9b27-47614c86c7cd.htm" />
+    <HelpKINode Title="constructor" Url="html/ff5bc9e7-b036-268e-db4d-77ca418633d3.htm" />
+    <HelpKINode Title="constructor" Url="html/9feac310-86bd-7c3d-15ef-f6dee116f127.htm" />
+    <HelpKINode Title="fields" Url="html/1cdd62f3-b671-73a8-3214-f131479a684f.htm" />
+    <HelpKINode Title="methods" Url="html/1a30986b-40ee-3651-b3b1-8e917c8395d5.htm" />
+  </HelpKINode>
+  <HelpKINode Title="GameController.Commands field" Url="html/459e3453-46c9-b669-bdcf-f980fe6c0fc8.htm" />
+  <HelpKINode Title="GameController.GameController constructor">
+    <HelpKINode Title="GameController Constructor " Url="html/ff5bc9e7-b036-268e-db4d-77ca418633d3.htm" />
+    <HelpKINode Title="GameController Constructor " Url="html/9feac310-86bd-7c3d-15ef-f6dee116f127.htm" />
+  </HelpKINode>
+  <HelpKINode Title="GameController.Invoke method" Url="html/f5eb5470-9208-0436-c32b-63fc28de1547.htm" />
+  <HelpKINode Title="GameFifteen namespace" Url="html/d0b0a733-9766-d76a-f052-2974b53a1d8d.htm" />
+  <HelpKINode Title="GameFifteen.Board class" Url="html/56ff77d9-5324-a890-aa3c-b24d94cfe53a.htm" />
+  <HelpKINode Title="GameFifteen.ConsoleWriter class" Url="html/35c7f0ed-a34d-1121-1673-f3122037abde.htm" />
+  <HelpKINode Title="GameFifteen.Game class" Url="html/581ccd04-1cb1-9968-7e5f-a036bda3286e.htm" />
+  <HelpKINode Title="GameFifteen.GameFifteenEngine class" Url="html/423cdfeb-c966-f44f-788f-a0179090ff61.htm" />
+  <HelpKINode Title="GameFifteen.ManageInput namespace" Url="html/4f1dbfd4-ab3e-1140-63fa-f25e07d3a353.htm" />
+  <HelpKINode Title="GameFifteen.ManageInput.Exit class" Url="html/c5ef0aa5-0fe3-88e1-af33-cf4fe9481720.htm" />
+  <HelpKINode Title="GameFifteen.ManageInput.GameController class" Url="html/ad369301-fdcb-faef-9b27-47614c86c7cd.htm" />
+  <HelpKINode Title="GameFifteen.ManageInput.ICommand interface" Url="html/fb6c0cb7-2eab-e5e7-4a73-10cf9076a307.htm" />
+  <HelpKINode Title="GameFifteen.ManageInput.Move class" Url="html/d3d6bd5d-8469-1242-e5d5-f4086cb4509c.htm" />
+  <HelpKINode Title="GameFifteen.ManageInput.Restart class" Url="html/e487d792-e3d6-003e-5729-f9b0557c2723.htm" />
+  <HelpKINode Title="GameFifteen.ManageInput.Restore class" Url="html/9003f26e-1e6c-c32b-e42b-2b600b9d7b6b.htm" />
+  <HelpKINode Title="GameFifteen.ManageInput.Save class" Url="html/1c41e5d1-981f-812a-c22e-3d8f782070bd.htm" />
+  <HelpKINode Title="GameFifteen.ManageInput.Top class" Url="html/874d924f-62e5-9580-0665-0439e955492e.htm" />
+  <HelpKINode Title="GameFifteen.MovePerformedEventArgs class" Url="html/40aa7b08-5f3f-479a-0017-b8ffc862b200.htm" />
+  <HelpKINode Title="GameFifteen.PersonalScore structure" Url="html/1abfcf9e-0b1c-177b-f1c0-dea24dff7c68.htm" />
+  <HelpKINode Title="GameFifteen.State class" Url="html/50bbd388-eacd-4fde-06d4-fd5b847127a7.htm" />
+  <HelpKINode Title="GameFifteen.TopScores class" Url="html/aecd3657-cf62-8162-b178-f3dddac7ec6f.htm" />
+  <HelpKINode Title="GameFifteenEngine class">
+    <HelpKINode Title="GameFifteenEngine Class" Url="html/423cdfeb-c966-f44f-788f-a0179090ff61.htm" />
+    <HelpKINode Title="about GameFifteenEngine class" Url="html/423cdfeb-c966-f44f-788f-a0179090ff61.htm" />
+    <HelpKINode Title="constructor" Url="html/d5bb6562-9fb9-7f81-30a2-32b5ff129130.htm" />
+    <HelpKINode Title="methods" Url="html/2f3d88af-264b-e06a-13be-b6a53349be3f.htm" />
+  </HelpKINode>
+  <HelpKINode Title="GameFifteenEngine.GameFifteenEngine constructor" Url="html/d5bb6562-9fb9-7f81-30a2-32b5ff129130.htm" />
+  <HelpKINode Title="GameFifteenEngine.Main method" Url="html/ec29ee6f-c71d-5a51-7dbc-1da7d87cbc64.htm" />
+  <HelpKINode Title="GameFifteenEngine.PlayGame method" Url="html/b12561b0-4053-ac92-839a-d91e713ddc31.htm" />
+  <HelpKINode Title="GameInstance field" Url="html/e0c0217e-66ae-4332-b4e4-caf1ef1a92c3.htm" />
+  <HelpKINode Title="GetTopScoresFromFile method" Url="html/99a4a184-6df5-2859-0574-d70e178d11d3.htm" />
+  <HelpKINode Title="ICommand interface">
+    <HelpKINode Title="ICommand Interface" Url="html/fb6c0cb7-2eab-e5e7-4a73-10cf9076a307.htm" />
+    <HelpKINode Title="about ICommand interface" Url="html/fb6c0cb7-2eab-e5e7-4a73-10cf9076a307.htm" />
+    <HelpKINode Title="methods" Url="html/934d2ce0-de8a-99cd-fb73-26fbc74bc94f.htm" />
+  </HelpKINode>
+  <HelpKINode Title="ICommand.Execute method" Url="html/9a3f52bb-c6b5-75f4-246d-f990bb6edb51.htm" />
+  <HelpKINode Title="InitializeMatrix method" Url="html/d72041f5-3e04-ad32-c24b-fb403aebdb9f.htm" />
+  <HelpKINode Title="Instance property" Url="html/cd9478c7-1d34-9d8f-b123-3bb8f896116e.htm" />
+  <HelpKINode Title="Invoke method" Url="html/f5eb5470-9208-0436-c32b-63fc28de1547.htm" />
+  <HelpKINode Title="IsFinished property" Url="html/be79064f-38fb-3d79-7a21-970bd172d13c.htm" />
+  <HelpKINode Title="IsMatrixOrdered method" Url="html/720d16d2-667f-54cb-e486-3999ee3def5d.htm" />
+  <HelpKINode Title="LoadTurns method" Url="html/b7d9e7a7-b8c0-e4ff-14f7-23b9973df25a.htm" />
+  <HelpKINode Title="Main method" Url="html/ec29ee6f-c71d-5a51-7dbc-1da7d87cbc64.htm" />
+  <HelpKINode Title="Matrix property">
+    <HelpKINode Title="Board.Matrix Property " Url="html/5470a7b6-983f-cb5d-629a-e93525038500.htm" />
+    <HelpKINode Title="State.Matrix Property " Url="html/b44d5ce5-9835-8717-31d8-ea6656c6f72e.htm" />
+  </HelpKINode>
+  <HelpKINode Title="MATRIX_SIZE field" Url="html/14125bc5-72f4-15d9-fb82-9cad61b3a84f.htm" />
+  <HelpKINode Title="MATRIX_SIZE_COLUMNS field" Url="html/8fcafff9-f5d0-e0e9-af78-7a216fd3653a.htm" />
+  <HelpKINode Title="MATRIX_SIZE_ROWS field" Url="html/4fe605cb-9688-8a4d-ccdf-9ebcc2c57714.htm" />
+  <HelpKINode Title="Move class">
+    <HelpKINode Title="Move Class" Url="html/d3d6bd5d-8469-1242-e5d5-f4086cb4509c.htm" />
+    <HelpKINode Title="about Move class" Url="html/d3d6bd5d-8469-1242-e5d5-f4086cb4509c.htm" />
+    <HelpKINode Title="constructor" Url="html/41f3806c-df14-7596-eb8d-4242916af98d.htm" />
+    <HelpKINode Title="fields" Url="html/403ec7ab-076c-3e64-cc45-afc6ce6e554c.htm" />
+    <HelpKINode Title="methods" Url="html/df121cfe-864a-7fb6-55a3-bde247741bea.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Move.Execute method" Url="html/1c6e8f69-90e5-b93e-e3c9-8c0229c2c391.htm" />
+  <HelpKINode Title="Move.game field" Url="html/40e7b54a-a9f8-6c5b-0b04-2fa9348234c2.htm" />
+  <HelpKINode Title="Move.Move constructor" Url="html/41f3806c-df14-7596-eb8d-4242916af98d.htm" />
+  <HelpKINode Title="MoveCell method" Url="html/7d76de4e-232a-e75e-c8fc-9c2992c8b6f4.htm" />
+  <HelpKINode Title="MovePerformed event" Url="html/01e0f2ea-6631-f150-0f44-0419595e2282.htm" />
+  <HelpKINode Title="MovePerformedEventArgs class">
+    <HelpKINode Title="MovePerformedEventArgs Class" Url="html/40aa7b08-5f3f-479a-0017-b8ffc862b200.htm" />
+    <HelpKINode Title="about MovePerformedEventArgs class" Url="html/40aa7b08-5f3f-479a-0017-b8ffc862b200.htm" />
+    <HelpKINode Title="constructor" Url="html/0a2d485c-45c6-c875-7701-0f20ec470c10.htm" />
+  </HelpKINode>
+  <HelpKINode Title="MovePerformedEventArgs.MovePerformedEventArgs constructor" Url="html/0a2d485c-45c6-c875-7701-0f20ec470c10.htm" />
+  <HelpKINode Title="NextMove method" Url="html/ecabee31-fc57-e4df-44f1-f52436e0e5f3.htm" />
+  <HelpKINode Title="OnMovePerformed method" Url="html/9388e3f3-de10-9ef1-6826-56d8a2432170.htm" />
+  <HelpKINode Title="PersonalScore structure">
+    <HelpKINode Title="PersonalScore Structure" Url="html/1abfcf9e-0b1c-177b-f1c0-dea24dff7c68.htm" />
+    <HelpKINode Title="about PersonalScore structure" Url="html/1abfcf9e-0b1c-177b-f1c0-dea24dff7c68.htm" />
+    <HelpKINode Title="constructor" Url="html/5ff3159a-9596-f0ae-c219-263cf0c7ffe5.htm" />
+    <HelpKINode Title="fields" Url="html/96ba9f18-1a15-de7a-ca0c-7eee9c4a93c8.htm" />
+    <HelpKINode Title="properties" Url="html/78bf08f1-4b88-22df-e704-1aa8a35ddc46.htm" />
+  </HelpKINode>
+  <HelpKINode Title="PersonalScore.PersonalScore constructor" Url="html/5ff3159a-9596-f0ae-c219-263cf0c7ffe5.htm" />
+  <HelpKINode Title="PersonalScore.userName field" Url="html/9f61d6f8-b501-875b-a5a9-4e966e5d2df6.htm" />
+  <HelpKINode Title="PersonalScore.UserName property" Url="html/7a0e56c0-3df8-7660-a036-47c1e681f22c.htm" />
+  <HelpKINode Title="PersonalScore.userScore field" Url="html/b4106368-a702-353f-15d9-434ef55f95a2.htm" />
+  <HelpKINode Title="PersonalScore.UserScore property" Url="html/7107682f-e0a2-a910-1254-0fa469a5f94d.htm" />
+  <HelpKINode Title="PlayGame method" Url="html/b12561b0-4053-ac92-839a-d91e713ddc31.htm" />
+  <HelpKINode Title="PrintFinalGameResult method" Url="html/f32fedd8-19de-8169-5f25-18b56579dbaf.htm" />
+  <HelpKINode Title="PrintMatrix method" Url="html/3b8aa7f5-854e-0103-1b8c-4b6d79ec9bb3.htm" />
+  <HelpKINode Title="PrintMessage method" Url="html/26bfc5b0-3a4a-2359-6001-4e8585f81486.htm" />
+  <HelpKINode Title="PrintTopScores method" Url="html/a9dc5795-4db8-53a7-b7dc-56504a29ef20.htm" />
+  <HelpKINode Title="PrintWelcomeMessage method" Url="html/9a35e1bd-33cc-f3cc-fc5b-6ce8bbc4d990.htm" />
+  <HelpKINode Title="random field" Url="html/acff7b1a-22f5-dc17-533d-6483cb13b5c0.htm" />
+  <HelpKINode Title="ResetBoard method" Url="html/30f48b6d-2c36-8d76-d7d7-10efb7318238.htm" />
+  <HelpKINode Title="Restart class">
+    <HelpKINode Title="Restart Class" Url="html/e487d792-e3d6-003e-5729-f9b0557c2723.htm" />
+    <HelpKINode Title="about Restart class" Url="html/e487d792-e3d6-003e-5729-f9b0557c2723.htm" />
+    <HelpKINode Title="constructor" Url="html/515ffaff-111e-b81b-9ea6-c2469948d8e9.htm" />
+    <HelpKINode Title="fields" Url="html/49b9f0ef-b260-f906-8ddd-1cbec286b40d.htm" />
+    <HelpKINode Title="methods" Url="html/17cf4dd7-2da4-3f35-34de-3d39f1abcb5b.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Restart method" Url="html/1286816e-690e-73ed-ba83-18114aa0d3a0.htm" />
+  <HelpKINode Title="Restart.Execute method" Url="html/7fdcd746-bf5d-3013-e823-93741955e844.htm" />
+  <HelpKINode Title="Restart.game field" Url="html/5488b881-7851-130d-7dbc-938cd7c99370.htm" />
+  <HelpKINode Title="Restart.Restart constructor" Url="html/515ffaff-111e-b81b-9ea6-c2469948d8e9.htm" />
+  <HelpKINode Title="Restore class">
+    <HelpKINode Title="Restore Class" Url="html/9003f26e-1e6c-c32b-e42b-2b600b9d7b6b.htm" />
+    <HelpKINode Title="about Restore class" Url="html/9003f26e-1e6c-c32b-e42b-2b600b9d7b6b.htm" />
+    <HelpKINode Title="constructor" Url="html/758f075a-022c-282f-085b-ff2eaccba363.htm" />
+    <HelpKINode Title="fields" Url="html/caab7e95-d1c9-cf89-9e40-4faac8c48783.htm" />
+    <HelpKINode Title="methods" Url="html/a1245f05-510f-1a37-a76b-935e69ad50ef.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Restore.Execute method" Url="html/51fb1d9b-7bf8-45e6-acff-89042b154897.htm" />
+  <HelpKINode Title="Restore.game field" Url="html/f23047b0-7252-ee7e-68d4-46c1666eb40d.htm" />
+  <HelpKINode Title="Restore.Restore constructor" Url="html/758f075a-022c-282f-085b-ff2eaccba363.htm" />
+  <HelpKINode Title="RestoreState method" Url="html/5b492f92-b33f-5764-65d0-1572d32821a3.htm" />
+  <HelpKINode Title="Save class">
+    <HelpKINode Title="Save Class" Url="html/1c41e5d1-981f-812a-c22e-3d8f782070bd.htm" />
+    <HelpKINode Title="about Save class" Url="html/1c41e5d1-981f-812a-c22e-3d8f782070bd.htm" />
+    <HelpKINode Title="constructor" Url="html/33204ca0-f98d-e6c0-f3bb-ecf1dd034043.htm" />
+    <HelpKINode Title="fields" Url="html/b08569d5-ef5f-c013-bbad-431409ba7ba6.htm" />
+    <HelpKINode Title="methods" Url="html/95c494ef-b3f4-e5b9-6652-5ef7102f7509.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Save.Execute method" Url="html/873e0033-ffc7-119f-d732-64eda76abd4b.htm" />
+  <HelpKINode Title="Save.game field" Url="html/4baf2021-2e69-0c60-b03f-1d173a46ce8a.htm" />
+  <HelpKINode Title="Save.Save constructor" Url="html/33204ca0-f98d-e6c0-f3bb-ecf1dd034043.htm" />
+  <HelpKINode Title="SavedStates property" Url="html/bd00a02f-95a1-fe2d-fb06-a89a7dcb77df.htm" />
+  <HelpKINode Title="SaveState method" Url="html/ee31fcba-ad07-bfea-0aaf-f5b6712cf043.htm" />
+  <HelpKINode Title="ShuffleMatrix method" Url="html/616c3909-9d23-e9b7-89b2-83a5796b4c5a.htm" />
+  <HelpKINode Title="State class">
+    <HelpKINode Title="State Class" Url="html/50bbd388-eacd-4fde-06d4-fd5b847127a7.htm" />
+    <HelpKINode Title="about State class" Url="html/50bbd388-eacd-4fde-06d4-fd5b847127a7.htm" />
+    <HelpKINode Title="constructor" Url="html/d92609af-f4ed-f719-0555-d9ee1873ad3a.htm" />
+    <HelpKINode Title="properties" Url="html/368d0c46-c33f-5f44-7b4c-3d7e8f2b7522.htm" />
+  </HelpKINode>
+  <HelpKINode Title="State.EmptyCellColumn property" Url="html/0afb8e47-9eb3-fe04-2ab3-026f10109f39.htm" />
+  <HelpKINode Title="State.EmptyCellRow property" Url="html/d798afc8-67c3-7a32-b330-6fa0c89e1ab3.htm" />
+  <HelpKINode Title="State.Matrix property" Url="html/b44d5ce5-9835-8717-31d8-ea6656c6f72e.htm" />
+  <HelpKINode Title="State.State constructor" Url="html/d92609af-f4ed-f719-0555-d9ee1873ad3a.htm" />
+  <HelpKINode Title="State.Turn property" Url="html/85f82abe-6d1e-a9d5-0afe-4d885d22c642.htm" />
+  <HelpKINode Title="Top class">
+    <HelpKINode Title="Top Class" Url="html/874d924f-62e5-9580-0665-0439e955492e.htm" />
+    <HelpKINode Title="about Top class" Url="html/874d924f-62e5-9580-0665-0439e955492e.htm" />
+    <HelpKINode Title="constructor" Url="html/f5eb97d6-1ffe-fb75-0cf3-4aab45c29ddf.htm" />
+    <HelpKINode Title="methods" Url="html/a5c2fb3e-36bc-30dd-5181-25b7bbdae9ee.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Top.Execute method" Url="html/d285684c-6979-390d-8868-8e0089c59c1a.htm" />
+  <HelpKINode Title="Top.Top constructor" Url="html/f5eb97d6-1ffe-fb75-0cf3-4aab45c29ddf.htm" />
+  <HelpKINode Title="TopScores class">
+    <HelpKINode Title="TopScores Class" Url="html/aecd3657-cf62-8162-b178-f3dddac7ec6f.htm" />
+    <HelpKINode Title="about TopScores class" Url="html/aecd3657-cf62-8162-b178-f3dddac7ec6f.htm" />
+    <HelpKINode Title="constructor" Url="html/2c6142d6-efb1-6199-5bc7-8ed51b3aab9e.htm" />
+    <HelpKINode Title="fields" Url="html/5c437513-9a8f-c5fd-3b14-f1fb70706d98.htm" />
+    <HelpKINode Title="methods" Url="html/12ea3924-3f0f-5c9a-1da9-b3ea4eedc43a.htm" />
+  </HelpKINode>
+  <HelpKINode Title="TopScores.GetTopScoresFromFile method" Url="html/99a4a184-6df5-2859-0574-d70e178d11d3.htm" />
+  <HelpKINode Title="TopScores.TopScores constructor" Url="html/2c6142d6-efb1-6199-5bc7-8ed51b3aab9e.htm" />
+  <HelpKINode Title="TopScores.TOP_SCORES_AMOUNT field" Url="html/f1f99042-c7e1-5c69-42af-8ab04724a59c.htm" />
+  <HelpKINode Title="TopScores.TOP_SCORES_FILENAME field" Url="html/af5b4ca9-abac-cd21-f95d-4dedc8c389da.htm" />
+  <HelpKINode Title="TopScores.TOP_SCORES_PERSON_PATTERN field" Url="html/7cc15d88-ae7e-5b91-c331-d49208cd5cab.htm" />
+  <HelpKINode Title="TopScores.UpgradeTopScore method" Url="html/fe94f68e-42d5-becc-1e66-bf3bf7f138e0.htm" />
+  <HelpKINode Title="TopScores.UpgradeTopScoreInFile method" Url="html/92b0797a-fa23-f175-1cf5-50643191bc23.htm" />
+  <HelpKINode Title="TopScores.UpgradeTopScorePairs method" Url="html/43065b1e-20fb-9ac3-359c-8e4fa8110ade.htm" />
+  <HelpKINode Title="TOP_SCORES_AMOUNT field" Url="html/f1f99042-c7e1-5c69-42af-8ab04724a59c.htm" />
+  <HelpKINode Title="TOP_SCORES_FILENAME field" Url="html/af5b4ca9-abac-cd21-f95d-4dedc8c389da.htm" />
+  <HelpKINode Title="TOP_SCORES_PERSON_PATTERN field" Url="html/7cc15d88-ae7e-5b91-c331-d49208cd5cab.htm" />
+  <HelpKINode Title="Turn property">
+    <HelpKINode Title="Game.Turn Property " Url="html/8667751c-fea4-e5f8-6a62-67df180f58e7.htm" />
+    <HelpKINode Title="State.Turn Property " Url="html/85f82abe-6d1e-a9d5-0afe-4d885d22c642.htm" />
+  </HelpKINode>
+  <HelpKINode Title="UpdateTurns method" Url="html/687bd538-13ce-0abe-8e56-36b809b4ef63.htm" />
+  <HelpKINode Title="UpgradeTopScore method" Url="html/fe94f68e-42d5-becc-1e66-bf3bf7f138e0.htm" />
+  <HelpKINode Title="UpgradeTopScoreInFile method" Url="html/92b0797a-fa23-f175-1cf5-50643191bc23.htm" />
+  <HelpKINode Title="UpgradeTopScorePairs method" Url="html/43065b1e-20fb-9ac3-359c-8e4fa8110ade.htm" />
+  <HelpKINode Title="userName field" Url="html/9f61d6f8-b501-875b-a5a9-4e966e5d2df6.htm" />
+  <HelpKINode Title="UserName property" Url="html/7a0e56c0-3df8-7660-a036-47c1e681f22c.htm" />
+  <HelpKINode Title="userScore field" Url="html/b4106368-a702-353f-15d9-434ef55f95a2.htm" />
+  <HelpKINode Title="UserScore property" Url="html/7107682f-e0a2-a910-1254-0fa469a5f94d.htm" />
+</HelpKI>

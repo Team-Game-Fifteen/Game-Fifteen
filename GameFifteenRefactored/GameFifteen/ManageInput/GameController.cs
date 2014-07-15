@@ -4,6 +4,9 @@
     using System.Collections.Generic;
     using System.Linq;
 
+    /// <summary>
+    /// Class for command handling.
+    /// </summary>
     public class GameController
     {
         /// <summary>

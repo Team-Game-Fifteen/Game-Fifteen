@@ -3,6 +3,9 @@
     using System;
     using System.Linq;
 
+    /// <summary>
+    /// Save class for saving the game state.
+    /// </summary>
     public class Save : ICommand
     {
         /// <summary>

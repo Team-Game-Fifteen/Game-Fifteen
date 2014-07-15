@@ -9,25 +9,6 @@ namespace GameFifteen_Tests
     public class TestGameBoard
     {
         [Test]
-        public void TestInitializeMatrix() //Initialize method changed.
-        {
-            Board testBoard = new Board();
-
-            string[,] expectedOutput = 
-            {
-                { "1", "2", "3", "4" },
-                { "5", "6", "7", "8" },
-                { "9", "10", "11", "12" },
-                { "13", "14", "15", " " }
-            };
-
-            string[,] actualOutput = testBoard.Matrix;
-            bool equalMatrices = this.AreMatricesEqual(expectedOutput, actualOutput);
-
-            Assert.IsTrue(equalMatrices);
-        }
-
-        [Test]
         public void TestShuffleMatrix()
         {
             Board testBoard = new Board();
@@ -45,47 +26,7 @@ namespace GameFifteen_Tests
             bool equalMatrices = this.AreMatricesEqual(matrixBeforeShuffle, matrixAfterShuffle);
 
             Assert.IsFalse(equalMatrices);
-        }
-
-        [Test]
-        public void TestNextMove() //Initialize method changed.
-        {
-            Board testBoard = new Board();
-            testBoard.NextMove(15);
-
-            string[,] expectedMatrixAfterNextMove = 
-            {
-                { "1", "2", "3", "4" },
-                { "5", "6", "7", "8" },
-                { "9", "10", "11", "12" },
-                { "13", "14", " ", "15" }
-            };
-
-            string[,] actualMatrixAfterNextMove = testBoard.Matrix;
-            bool equalMatrices = this.AreMatricesEqual(expectedMatrixAfterNextMove, actualMatrixAfterNextMove);
-
-            Assert.IsTrue(equalMatrices);
-        }
-
-        [Test]
-        public void TestIsMatrixOrdered() //Initialize method changed.
-        {
-            Board testBoard = new Board();
-
-            bool isMatrixOrdered = testBoard.IsMatrixOrdered();
-            Assert.IsTrue(isMatrixOrdered);
-        }
-
-        [Test]
-        public void TestCheckIfCellIsValid() //Initialize method changed.
-        {
-            Board testBoard = new Board();
-
-            int direction = 3;
-            bool cellIsValid = testBoard.CheckIfCellIsValid(direction);
-
-            Assert.IsTrue(cellIsValid);
-        }
+        }       
 
         private bool AreMatricesEqual(string[,] testMatrix, string[,] testedMatrix)
         {

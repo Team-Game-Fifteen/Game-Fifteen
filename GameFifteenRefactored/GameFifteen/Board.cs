@@ -3,6 +3,10 @@
     using System;
     using System.Linq;
 
+    /// <summary>
+    /// Class to define the game board and all functions connected with board initialization,
+    /// cell validation and movement.
+    /// </summary>
     public sealed class Board 
     {
         public const int MATRIX_SIZE_ROWS = 4;
@@ -110,7 +114,7 @@
             this.EmptyCellRow = state.EmptyCellRow;
         }
 
-        public void ShuffleMatrix()
+        private void ShuffleMatrix()
         {
             int matrixSize = MATRIX_SIZE_ROWS * MATRIX_SIZE_COLUMNS;
             int shuffles = this.random.Next(matrixSize, matrixSize * 100);
