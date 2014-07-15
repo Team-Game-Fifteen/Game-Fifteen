@@ -7,14 +7,14 @@
     public class GameController
     {
         /// <summary>
-        /// stores all possible commands
+        /// Stores all possible commands.
         /// </summary>
         public static Dictionary<string, ICommand> Commands = new Dictionary<string, ICommand>();
 
         /// <summary>
         /// Initializes a new instance of the <see cref="GameController"/> class.
         /// </summary>
-        /// <param name="game"> the game instance </param>
+        /// <param name="game">The game instance.</param>
         public GameController(Game game)
         {
             Commands.Add("top", new Top());
@@ -26,9 +26,9 @@
         }
 
         /// <summary>
-        /// invokes a command from the list from player input
+        /// Invokes a command from the list from player input.
         /// </summary>
-        /// <param name="consoleInputLine"> player input command </param>
+        /// <param name="consoleInputLine">Player input command.</param>
         public void Invoke(string consoleInputLine)
         {
             int cellNumber;

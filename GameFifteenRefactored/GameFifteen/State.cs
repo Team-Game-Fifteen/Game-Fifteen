@@ -4,7 +4,7 @@
     using System.Linq;
 
     /// <summary>
-    /// class to define the needed information to save game state
+    /// Class to define the needed information to save game state.
     /// </summary>
     public class State
     {

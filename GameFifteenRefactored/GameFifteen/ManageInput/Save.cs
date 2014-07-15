@@ -6,14 +6,14 @@
     public class Save : ICommand
     {
         /// <summary>
-        /// instance of the game to be saved
+        /// Instance of the game to be saved.
         /// </summary>
         private Game game;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="Save"/> class.
         /// </summary>
-        /// <param name="game"> the game to be saved </param>
+        /// <param name="game">The game to be saved.</param>
         public Save(Game game)
         {
             this.game = game;

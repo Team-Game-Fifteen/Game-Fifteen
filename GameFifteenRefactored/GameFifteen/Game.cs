@@ -5,7 +5,7 @@
     using System.Linq;
 
     /// <summary>
-    /// game class for instantiating current game
+    /// Game class for instantiating current game.
     /// </summary>
     public class Game
     {
@@ -44,11 +44,17 @@
             this.SavedStates = new Stack();
         }
 
+        /// <summary>
+        /// Saves the current arrangement of the cells.
+        /// </summary>
         public void SaveState()
         {
             this.SavedStates.Push(new State(this.Turn, this.Board));
         }
 
+        /// <summary>
+        /// Restores last saved arrangement.
+        /// </summary>
         public void RestoreState()
         {
             if (this.SavedStates.Count == 0)
@@ -63,6 +69,9 @@
             }
         }
 
+        /// <summary>
+        /// Counts the turns made.
+        /// </summary>
         public void LoadTurns()
         {
             this.Board.MovePerformed += new EventHandler<MovePerformedEventArgs>(this.UpdateTurns);
@@ -71,7 +80,7 @@
         private void UpdateTurns(object sender, MovePerformedEventArgs e)
         {
             this.Turn++;
-            //// Console.WriteLine(this.Turn);
+            //Console.WriteLine(this.Turn);
         }
     }
 }

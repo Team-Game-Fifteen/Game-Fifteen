@@ -4,19 +4,19 @@
     using System.Linq;
 
     /// <summary>
-    /// move class to enable game turn
+    /// Move class to enable game turn.
     /// </summary>
     public class Move : ICommand
     {
         /// <summary>
-        /// instance of the game to execute move
+        /// Instance of the game to execute move.
         /// </summary>
         private Game game;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="Move"/> class.
         /// </summary>
-        /// <param name="game"> the game instance </param>
+        /// <param name="game">The game instance.</param>
         public Move(Game game)
         {
             this.game = game;

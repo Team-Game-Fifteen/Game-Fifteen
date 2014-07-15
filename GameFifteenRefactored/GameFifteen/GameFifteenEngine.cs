@@ -5,13 +5,12 @@
     using GameFifteen.ManageInput;
 
     /// <summary>
-    /// GameFifteenEngine is our "main" class. Here we make instances of the public classes and call the public 
-    /// methods to generate the game's board, to read the user input and to check if the game is over.
+    /// GameFifteenEngine is our "main" class. Here we make instances of the public classes.
     /// </summary>
     public class GameFifteenEngine
     {
         /// <summary>
-        /// Main method, which starts the game
+        /// Main method, which starts the game.
         /// </summary>
         public static void Main()
         {

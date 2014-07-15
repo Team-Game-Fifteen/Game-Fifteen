@@ -6,7 +6,7 @@
     using System.Text.RegularExpressions;
 
     /// <summary>
-    /// Scores class to work with player's score
+    /// Scores class to work with player's score.
     /// </summary>
     public class TopScores
     {
@@ -19,10 +19,6 @@
             string[] topScores = GetTopScoresFromFile();
             Console.Write("Please enter your name for the top scoreboard: ");
             string name = Console.ReadLine();
-            //// if (name == string.Empty) //Moved to PersonalScore.cs
-            //// {
-            ////     name = "Anonymous";
-            //// }
 
             topScores[TOP_SCORES_AMOUNT] = string.Format("0. {0} --> {1} move", name, game.Turn);
             Array.Sort(topScores);

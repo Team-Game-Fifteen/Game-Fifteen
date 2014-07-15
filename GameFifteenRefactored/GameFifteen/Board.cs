@@ -5,28 +5,17 @@
 
     public sealed class Board 
     {
-        /// <summary>
-        /// number of rows in the game
-        /// </summary>
         public const int MATRIX_SIZE_ROWS = 4;
 
-        /// <summary>
-        /// number of columns in the game
-        /// </summary>
         public const int MATRIX_SIZE_COLUMNS = 4;
 
-        /// <summary>
-        /// total size of the game board
-        /// </summary>
         public const int MATRIX_SIZE = MATRIX_SIZE_ROWS * MATRIX_SIZE_COLUMNS;
 
         private const string EMPTY_CELL_VALUE = " ";
+
         private readonly int[] directionRow = { -1, 0, 1, 0 };
         private readonly int[] directionColumn = { 0, 1, 0, -1 };
-
-        /// <summary>
-        /// instance of a random generator
-        /// </summary>
+               
         private readonly Random random = new Random();
 
         /// <summary>
@@ -45,6 +34,11 @@
 
         public int EmptyCellColumn { get; private set; }
 
+        /// <summary>
+        /// Checks if a cell can be moved.
+        /// </summary>
+        /// <param name="direction">A number with value between 0 and 3, which is index of a move.</param>
+        /// <returns>True if valid.</returns>
         public bool CheckIfCellIsValid(int direction)
         {
             int nextCellRow = this.EmptyCellRow + this.directionRow[direction];
@@ -58,6 +52,11 @@
             return isCellValid;
         }
 
+        /// <summary>
+        /// Checks if cell and directions are valid and if they are calls
+        /// MoveCell() and OnMovePerformed().
+        /// </summary>
+        /// <param name="cellNumber">The number of the cell given by the player.</param>
         public void NextMove(int cellNumber)
         {
             if (cellNumber <= 0 || cellNumber >= MATRIX_SIZE)
@@ -160,6 +159,9 @@
             this.EmptyCellColumn = nextCellColumn;
         }
 
+        /// <summary>
+        /// This is used to count the turns made by the plaer.
+        /// </summary>
         private void OnMovePerformed()
         {
             if (this.MovePerformed != null)
@@ -168,6 +170,11 @@
             }
         }
 
+        /// <summary>
+        /// Finds in which direction the cell is allowed to move. 
+        /// </summary>
+        /// <param name="cellNumber">The number of the cell given by the player.</param>
+        /// <returns>Number from 0 to 3, which is index representing direction.</returns>
         private int CellNumberToDirection(int cellNumber)
         {
             int direction = -1;

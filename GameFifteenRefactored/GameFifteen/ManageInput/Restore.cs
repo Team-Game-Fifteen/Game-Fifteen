@@ -4,12 +4,12 @@
     using System.Linq;
 
     /// <summary>
-    /// restore class for loading a game
+    /// Restore class for loading a game.
     /// </summary>
     public class Restore : ICommand
     {
         /// <summary>
-        /// instance of a game to restore
+        /// Instance of a game to restore
         /// </summary>
         private Game game;
 

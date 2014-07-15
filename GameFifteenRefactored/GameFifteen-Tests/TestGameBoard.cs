@@ -9,7 +9,7 @@ namespace GameFifteen_Tests
     public class TestGameBoard
     {
         [Test]
-        public void TestInitializeMatrix()
+        public void TestInitializeMatrix() //Initialize method changed.
         {
             Board testBoard = new Board();
 
@@ -48,7 +48,7 @@ namespace GameFifteen_Tests
         }
 
         [Test]
-        public void TestNextMove()
+        public void TestNextMove() //Initialize method changed.
         {
             Board testBoard = new Board();
             testBoard.NextMove(15);
@@ -68,7 +68,7 @@ namespace GameFifteen_Tests
         }
 
         [Test]
-        public void TestIsMatrixOrdered()
+        public void TestIsMatrixOrdered() //Initialize method changed.
         {
             Board testBoard = new Board();
 
@@ -77,7 +77,7 @@ namespace GameFifteen_Tests
         }
 
         [Test]
-        public void TestCheckIfCellIsValid()
+        public void TestCheckIfCellIsValid() //Initialize method changed.
         {
             Board testBoard = new Board();
 

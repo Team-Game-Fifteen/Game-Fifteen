@@ -3,25 +3,25 @@
     using System;
 
     /// <summary>
-    /// Defines how the score of each player is described
+    /// Defines how the score of each player is described.
     /// </summary>
     public struct PersonalScore
     {
         /// <summary>
-        /// the name of the player
+        ///The name of the player.
         /// </summary>
         private string userName;
 
         /// <summary>
-        /// the score of the player
+        ///The score of the player.
         /// </summary>
         private int userScore;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="PersonalScore"/> struct.
         /// </summary>
-        /// <param name="name"> name of the player </param>
-        /// <param name="score"> player score </param>
+        /// <param name="name">Name of the player.</param>
+        /// <param name="score">Player score.</param>
         public PersonalScore(string name, int score)
             : this()
         {
