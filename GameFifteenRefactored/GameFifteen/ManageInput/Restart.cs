@@ -4,7 +4,7 @@
     using System.Linq;
 
     /// <summary>
-    /// Restart class for beginning a new game.
+    /// Begins a new game.
     /// </summary>
     public class Restart : ICommand
     {

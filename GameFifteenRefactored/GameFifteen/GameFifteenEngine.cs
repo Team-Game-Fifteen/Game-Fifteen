@@ -5,12 +5,12 @@
     using GameFifteen.ManageInput;
 
     /// <summary>
-    /// GameFifteenEngine is our "main" class. Here we make instances of the public classes.
+    /// Game's engine.
     /// </summary>
     public class GameFifteenEngine
     {
         /// <summary>
-        /// Main method, which starts the game.
+        /// Starts the game.
         /// </summary>
         public static void Main()
         {
@@ -18,7 +18,7 @@
         }
 
         /// <summary>
-        /// PlayGame() is the method which call's all the other essential methods of The Game Fifteen.
+        /// Calls all the other essential methods of The Game Fifteen.
         /// </summary>
         public static void PlayGame()
         {

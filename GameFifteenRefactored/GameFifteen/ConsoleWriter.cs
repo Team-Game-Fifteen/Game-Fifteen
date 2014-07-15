@@ -6,7 +6,7 @@
     using System.Text.RegularExpressions;
 
     /// <summary>
-    /// This class is responsible for printing all the messages a player can get during his play.
+    /// Prints all the messages a player can get during his play.
     /// </summary>
     public static class ConsoleWriter
     {
@@ -69,7 +69,7 @@
         }
 
         /// <summary>
-        /// This method prints on the console all the information the player needs after beating the game.
+        /// Prints on the console all the information the player needs after beating the game.
         /// Number of moves he made, the top score list and if the player was able to get on the top score list.
         /// </summary>
         /// <param name="game"> game instance </param>

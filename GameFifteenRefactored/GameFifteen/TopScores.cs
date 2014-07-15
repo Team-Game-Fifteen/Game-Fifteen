@@ -6,7 +6,7 @@
     using System.Text.RegularExpressions;
 
     /// <summary>
-    /// Scores class to work with player's score.
+    /// Upgrades and returns player's score.
     /// </summary>
     public class TopScores
     {

@@ -5,7 +5,7 @@
     using System.Linq;
 
     /// <summary>
-    /// Game class for instantiating current game.
+    /// Instantiates current game.
     /// </summary>
     public class Game
     {
@@ -21,6 +21,9 @@
             this.SavedStates = new Stack();
         }
 
+        /// <summary>
+        /// Instance of the Game class.
+        /// </summary>
         public static Game Instance
         {
             get

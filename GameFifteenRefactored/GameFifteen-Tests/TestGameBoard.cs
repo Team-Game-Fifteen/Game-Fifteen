@@ -12,7 +12,6 @@ namespace GameFifteen_Tests
         public void TestShuffleMatrix()
         {
             Board testBoard = new Board();
-            testBoard.ShuffleMatrix();
 
             string[,] matrixBeforeShuffle = 
             {

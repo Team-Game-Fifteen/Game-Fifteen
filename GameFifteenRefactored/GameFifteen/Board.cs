@@ -4,7 +4,7 @@
     using System.Linq;
 
     /// <summary>
-    /// Class to define the game board and all functions connected with board initialization,
+    /// Define the game board and all functions connected with board initialization,
     /// cell validation and movement.
     /// </summary>
     public sealed class Board 
@@ -164,7 +164,7 @@
         }
 
         /// <summary>
-        /// This is used to count the turns made by the plaer.
+        /// Counts the turns made by the plaer.
         /// </summary>
         private void OnMovePerformed()
         {

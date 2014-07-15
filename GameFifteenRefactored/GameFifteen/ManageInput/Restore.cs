@@ -4,7 +4,7 @@
     using System.Linq;
 
     /// <summary>
-    /// Restore class for loading a game.
+    /// Loads a game.
     /// </summary>
     public class Restore : ICommand
     {

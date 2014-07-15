@@ -5,7 +5,7 @@
     using System.Linq;
 
     /// <summary>
-    /// Class for command handling.
+    /// Class used for command handling.
     /// </summary>
     public class GameController
     {

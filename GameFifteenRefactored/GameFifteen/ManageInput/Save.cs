@@ -4,7 +4,7 @@
     using System.Linq;
 
     /// <summary>
-    /// Save class for saving the game state.
+    /// Saves the game state.
     /// </summary>
     public class Save : ICommand
     {

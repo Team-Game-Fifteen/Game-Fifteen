@@ -4,7 +4,7 @@
     using System.Linq;
 
     /// <summary>
-    /// Move class to enable game turn.
+    /// Enables game turn.
     /// </summary>
     public class Move : ICommand
     {

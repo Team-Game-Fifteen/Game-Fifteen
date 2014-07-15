@@ -26,10 +26,11 @@
     <Preliminary>False</Preliminary>
     <NamingMethod>Guid</NamingMethod>
     <HelpTitle>A Sandcastle Documentation for Game Fefteen</HelpTitle>
-    <ContentPlacement>AboveNamespaces</ContentPlacement>
+    <ContentPlacement>BelowNamespaces</ContentPlacement>
     <DocumentationSources>
       <DocumentationSource sourceFile="..\GameFifteenRefactored\GameFifteen\bin\Debug\GameFifteen.exe" xmlns="" />
-<DocumentationSource sourceFile="..\GameFifteenRefactored\GameFifteen\bin\Debug\GameFifteen.xml" xmlns="" /></DocumentationSources>
+      <DocumentationSource sourceFile="..\GameFifteenRefactored\GameFifteen\bin\Debug\GameFifteen.xml" xmlns="" />
+    </DocumentationSources>
     <BuildAssemblerVerbosity>OnlyWarningsAndErrors</BuildAssemblerVerbosity>
     <HelpFileFormat>Website</HelpFileFormat>
     <IndentHtml>False</IndentHtml>
@@ -39,8 +40,9 @@
     <CleanIntermediates>True</CleanIntermediates>
     <CopyrightText>Created by Team &amp;quot%3bGame-Fifteen-4&amp;quot%3b</CopyrightText>
     <FooterText>Telerik Academy</FooterText>
-    <HeaderText>An teamwork project</HeaderText>
+    <HeaderText>Game Fifteen</HeaderText>
     <VisibleItems>Attributes, ExplicitInterfaceImplementations, InheritedMembers, Internals, Privates, PrivateFields, Protected, SealedProtected, ProtectedInternalAsProtected</VisibleItems>
+    <ProjectSummary>A teamwork project for Telerik Academy.</ProjectSummary>
   </PropertyGroup>
   <!-- There are no properties for these groups.  AnyCPU needs to appear in order for Visual Studio to perform
 			 the build.  The others are optional common platform types that may appear. -->

@@ -4,7 +4,7 @@
     using System.Linq;
 
     /// <summary>
-    /// Top class for printing top list of players.
+    /// Print top list of players.
     /// </summary>
     public class Top : ICommand
     {

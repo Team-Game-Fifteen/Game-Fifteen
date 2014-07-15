@@ -4,9 +4,9 @@
     using System.Linq;
 
     /// <summary>
-    /// Exit class to exit the game.
+    /// Class used to exit the game.
     /// </summary>
-    class Exit : ICommand
+    public class Exit : ICommand
     {
         private Game game;
 
