@@ -62,7 +62,7 @@
         {
             if (this.SavedStates.Count == 0)
             {
-                ConsoleWriter.PrintMessage("There is no state to be restored!");
+                ConsoleWriter.PrintNoSavedStateMessage();
             }
             else
             {

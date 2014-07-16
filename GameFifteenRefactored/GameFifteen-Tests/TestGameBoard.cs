@@ -18,7 +18,7 @@ namespace GameFifteen_Tests
                 { "1", "2", "3", "4" },
                 { "5", "6", "7", "8" },
                 { "9", "10", "11", "12" },
-                { "13", "14", "15", " " }
+                { "13", "14", "15", string.Empty }
             };
 
             string[,] matrixAfterShuffle = testBoard.Matrix;
