@@ -31,7 +31,7 @@
 
             while (!game.IsFinished)
             {
-                ConsoleWriter.PrintMessage("Enter a number to move: ");
+                ConsoleWriter.PrintNextMoveMessage();
                 string consoleInputLine = Console.ReadLine();
                 controller.Invoke(consoleInputLine);
             }

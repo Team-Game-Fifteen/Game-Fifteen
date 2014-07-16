@@ -15,7 +15,7 @@
 
         public const int MATRIX_SIZE = MATRIX_SIZE_ROWS * MATRIX_SIZE_COLUMNS;
 
-        private const string EMPTY_CELL_VALUE = " ";
+        private readonly string EMPTY_CELL_VALUE = String.Empty;
 
         private readonly int[] directionRow = { -1, 0, 1, 0 };
         private readonly int[] directionColumn = { 0, 1, 0, -1 };
@@ -65,14 +65,14 @@
         {
             if (cellNumber <= 0 || cellNumber >= MATRIX_SIZE)
             {
-                ConsoleWriter.PrintMessage("That cell does not exist in the matrix.");
+                ConsoleWriter.PrintCellDoesNotExistMessage();
                 return;
             }
 
             int direction = this.CellNumberToDirection(cellNumber);
             if (direction == -1)
             {
-                ConsoleWriter.PrintMessage("Illegal move!");
+                ConsoleWriter.PrintIllegalMoveMessage();
                 return;
             }
 

@@ -18,7 +18,7 @@
         public void Execute(params object[] list)
         {
             this.game.IsFinished = true;
-            ConsoleWriter.PrintMessage("Good bye!");
+            ConsoleWriter.PrintGoodbye();
         }
     }
 }

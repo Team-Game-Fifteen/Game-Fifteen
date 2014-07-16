@@ -1,6 +1,7 @@
 ﻿namespace GameFifteen
 {
     using System;
+    using System.Collections.Generic;
     using System.Linq;
     using System.Text;
     using System.Text.RegularExpressions;
@@ -10,9 +11,39 @@
     /// </summary>
     public static class ConsoleWriter
     {
-        internal static void PrintMessage(string message)
+        internal static void PrintCellDoesNotExistMessage()
         {
-            Console.WriteLine(message);
+            Console.WriteLine("That cell does not exist in the matrix.");
+        }
+
+        internal static void PrintGoodbye()
+        {
+            Console.WriteLine("Goodbye!");
+        }
+
+        internal static void PrintIllegalCommandMessage()
+        {
+            Console.WriteLine("Illegal command!");
+        }
+
+        internal static void PrintIllegalMoveMessage()
+        {
+            Console.WriteLine("Illegal move!");
+        }
+
+        internal static void PrintStateSaved()
+        {
+            Console.WriteLine("The current state is saved");
+        }
+
+        internal static void PrintNoSavedStateMessage()
+        {
+            Console.WriteLine("There is no state to be restored!");
+        }
+
+        internal static void PrintNextMoveMessage()
+        {
+            Console.Write("Enter a number to move: ");
         }
 
         internal static void PrintMatrix(Board board)
