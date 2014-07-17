@@ -3,7 +3,7 @@
     using System;
     using System.Collections;
     using System.Linq;
-    using interfaces;
+    using Interfaces;
 
     /// <summary>
     /// Instantiates current game.

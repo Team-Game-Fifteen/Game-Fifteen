@@ -1,12 +1,15 @@
-﻿namespace GameFifteen.interfaces
+﻿namespace GameFifteen.Interfaces
 {
     using System;
 
-    interface IGame
+    public interface IGame
     {
         void Restart();
+
         void SaveState();
+
         void RestoreState();
+
         void LoadTurns();
     }
 }
