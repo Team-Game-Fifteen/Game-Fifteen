@@ -10,13 +10,10 @@
     public sealed class Board 
     {
         public const int MATRIX_SIZE_ROWS = 4;
-
         public const int MATRIX_SIZE_COLUMNS = 4;
-
         public const int MATRIX_SIZE = MATRIX_SIZE_ROWS * MATRIX_SIZE_COLUMNS;
 
         private readonly string EMPTY_CELL_VALUE = string.Empty;
-
         private readonly int[] directionRow = { -1, 0, 1, 0 };
         private readonly int[] directionColumn = { 0, 1, 0, -1 };
                
@@ -65,14 +62,14 @@
         {
             if (cellNumber <= 0 || cellNumber >= MATRIX_SIZE)
             {
-                ConsoleWriter.PrintMessage(Messages.IllegalValue);
+                ConsoleWriter.PrintMessage(Messages.IllegalValue());
                 return;
             }
 
             int direction = this.CellNumberToDirection(cellNumber);
             if (direction == -1)
             {
-                ConsoleWriter.PrintMessage(Messages.IllegalMove);
+                ConsoleWriter.PrintMessage(Messages.IllegalMove());
                 return;
             }
 

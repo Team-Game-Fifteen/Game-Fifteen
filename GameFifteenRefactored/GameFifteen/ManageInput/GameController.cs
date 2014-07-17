@@ -49,7 +49,7 @@
             }
             else
             {
-                ConsoleWriter.PrintMessage(Messages.IllegalCommand);
+                ConsoleWriter.PrintMessage(Messages.IllegalCommand());
             }
         }
     }

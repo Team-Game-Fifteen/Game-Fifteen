@@ -25,7 +25,7 @@
             Game game = Game.Instance;
 
             game.LoadTurns();
-            ConsoleWriter.PrintMessage(Messages.Welcome);
+            ConsoleWriter.PrintMessage(Messages.Welcome());
             ConsoleWriter.PrintMatrix(game.Board);
             GameController controller = new GameController(game);
 

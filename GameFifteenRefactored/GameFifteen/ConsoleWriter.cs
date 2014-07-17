@@ -12,7 +12,7 @@
     {
         internal static void PrintMessage(string message)
         {
-            Console.WriteLine(message);
+            Console.Write(message);
         }
 
         internal static void PrintMatrix(Board board)
@@ -41,11 +41,11 @@
 
         internal static void PrintTopScores()
         {
-            Console.WriteLine(Messages.ScoreBoard);
+            Console.Write(Messages.ScoreBoard());
             string[] topScores = TopScores.GetTopScoresFromFile();
             if (topScores[0] == null)
             {
-                Console.WriteLine(Messages.NoTopScores);
+                Console.WriteLine(Messages.NoTopScores());
             }
             else
             {
