@@ -12,10 +12,11 @@
         
         public static string Welcome()
         {
-            return string.Format(" Welcome to the game \"15\". {0}" +
-            " Please try to arrange the numbers sequentially. {0} Use: {0} 'top' to view the top scoreboard, {0}" +
-            " 'save' to save the current state, {0} 'restore' to restore a saved state (you can save many states), {0}" +
-            " 'restart' to start a new game,{0} 'exit' to quit the game.{0}", Environment.NewLine);
+            return string.Format(
+                " Welcome to the game \"15\". {0}" +
+                " Please try to arrange the numbers sequentially. {0} Use: {0} 'top' to view the top scoreboard, {0}" +
+                " 'save' to save the current state, {0} 'restore' to restore a saved state (you can save many states), {0}" +
+                " 'restart' to start a new game,{0} 'exit' to quit the game.{0}", Environment.NewLine);
         }
 
         public static string IllegalMove()

@@ -45,8 +45,9 @@
   <ItemGroup>
     <Compile Include="Game.cs" />
     <Compile Include="Board.cs" />
+    <Compile Include="interfaces\ICommand.cs" />
+    <Compile Include="interfaces\IGame.cs" />
     <Compile Include="ManageInput\Exit.cs" />
-    <Compile Include="ManageInput\ICommand.cs" />
     <Compile Include="ManageInput\GameController.cs" />
     <Compile Include="ManageInput\Move.cs" />
     <Compile Include="ManageInput\Restart.cs" />

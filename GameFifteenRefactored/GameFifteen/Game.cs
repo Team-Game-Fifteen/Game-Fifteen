@@ -3,11 +3,12 @@
     using System;
     using System.Collections;
     using System.Linq;
+    using interfaces;
 
     /// <summary>
     /// Instantiates current game.
     /// </summary>
-    public class Game
+    public class Game : IGame
     {
         private static readonly Game GameInstance = new Game();
 
