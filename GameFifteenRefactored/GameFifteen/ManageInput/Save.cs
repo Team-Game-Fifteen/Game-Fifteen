@@ -11,7 +11,7 @@
         /// <summary>
         /// Instance of the game to be saved.
         /// </summary>
-        private Game game;
+        private readonly Game game;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="Save"/> class.

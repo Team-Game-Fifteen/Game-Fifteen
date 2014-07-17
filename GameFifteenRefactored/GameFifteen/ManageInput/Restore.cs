@@ -11,7 +11,7 @@
         /// <summary>
         /// Instance of a game to restore
         /// </summary>
-        private Game game;
+        private readonly Game game;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="Restore"/> class.

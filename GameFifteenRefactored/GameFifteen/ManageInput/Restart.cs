@@ -11,7 +11,7 @@
         /// <summary>
         /// The instance of the game to be restarted.
         /// </summary>
-        private Game game;
+        private readonly Game game;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="Restart"/> class.

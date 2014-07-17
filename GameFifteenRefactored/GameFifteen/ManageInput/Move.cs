@@ -11,7 +11,7 @@
         /// <summary>
         /// Instance of the game to execute move.
         /// </summary>
-        private Game game;
+        private readonly Game game;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="Move"/> class.

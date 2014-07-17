@@ -2,6 +2,9 @@
 {
     using System;
 
+    /// <summary>
+    /// Static Class to hold all string constants
+    /// </summary>
     public static class Messages
     {
         public const string Welcome = "Welcome to the game \"15\". " +
@@ -24,15 +27,14 @@
 
         public const string TheEnd = "Goodbye!";
 
-
         public static string CongratulationMessage(string movesCount)
         {
-            return String.Format(" Congratulations! You won the game in {0}.", movesCount);
+            return string.Format(" Congratulations! You won the game in {0}.", movesCount);
         }
 
         public static string NoTopScoreAchieved(int score)
         {
-            return String.Format(" You couldn't get in the top {0} scoreboard.", score);
+            return string.Format(" You couldn't get in the top {0} scoreboard.", score);
         }
     }
 }

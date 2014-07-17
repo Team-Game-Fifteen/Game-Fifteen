@@ -12,7 +12,7 @@
         /// <summary>
         /// Stores all possible commands.
         /// </summary>
-        public static Dictionary<string, ICommand> Commands = new Dictionary<string, ICommand>();
+        private static Dictionary<string, ICommand> commands = new Dictionary<string, ICommand>();
 
         /// <summary>
         /// Initializes a new instance of the <see cref="GameController"/> class.
@@ -20,12 +20,12 @@
         /// <param name="game">The game instance.</param>
         public GameController(Game game)
         {
-            Commands.Add("top", new Top());
-            Commands.Add("exit", new Exit(game));
-            Commands.Add("save", new Save(game));
-            Commands.Add("restore", new Restore(game));
-            Commands.Add("restart", new Restart(game));
-            Commands.Add("move", new Move(game));
+            commands.Add("top", new Top());
+            commands.Add("exit", new Exit(game));
+            commands.Add("save", new Save(game));
+            commands.Add("restore", new Restore(game));
+            commands.Add("restart", new Restart(game));
+            commands.Add("move", new Move(game));
         }
 
         /// <summary>
@@ -39,12 +39,12 @@
 
             if (int.TryParse(consoleInputLine, out cellNumber))
             {
-                newCommand = Commands["move"];
+                newCommand = commands["move"];
                 newCommand.Execute(cellNumber);                
             }
-            else if (Commands.ContainsKey(consoleInputLine))
+            else if (commands.ContainsKey(consoleInputLine))
             {
-                newCommand = Commands[consoleInputLine];
+                newCommand = commands[consoleInputLine];
                 newCommand.Execute();
             }
             else

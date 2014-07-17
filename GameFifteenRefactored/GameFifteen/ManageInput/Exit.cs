@@ -8,7 +8,7 @@
     /// </summary>
     public class Exit : ICommand
     {
-        private Game game;
+        private readonly Game game;
 
         public Exit(Game game)
         {
