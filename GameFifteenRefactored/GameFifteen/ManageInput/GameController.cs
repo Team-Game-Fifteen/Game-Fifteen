@@ -42,7 +42,7 @@
                 newCommand = commands["move"];
                 newCommand.Execute(cellNumber);                
             }
-            else if (commands.ContainsKey(consoleInputLine))
+            else if (consoleInputLine != "move" && commands.ContainsKey(consoleInputLine))
             {
                 newCommand = commands[consoleInputLine];
                 newCommand.Execute();
