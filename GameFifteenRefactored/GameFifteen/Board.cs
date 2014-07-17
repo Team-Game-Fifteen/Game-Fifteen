@@ -65,14 +65,14 @@
         {
             if (cellNumber <= 0 || cellNumber >= MATRIX_SIZE)
             {
-                ConsoleWriter.PrintCellDoesNotExistMessage();
+                ConsoleWriter.PrintMessage(Messages.IllegalValue);
                 return;
             }
 
             int direction = this.CellNumberToDirection(cellNumber);
             if (direction == -1)
             {
-                ConsoleWriter.PrintIllegalMoveMessage();
+                ConsoleWriter.PrintMessage(Messages.IllegalMove);
                 return;
             }
 

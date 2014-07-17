@@ -25,13 +25,13 @@
             Game game = Game.Instance;
 
             game.LoadTurns();
-            ConsoleWriter.PrintWelcomeMessage();
+            ConsoleWriter.PrintMessage(Messages.Welcome);
             ConsoleWriter.PrintMatrix(game.Board);
             GameController controller = new GameController(game);
 
             while (!game.IsFinished)
             {
-                ConsoleWriter.PrintNextMoveMessage();
+                ConsoleWriter.PrintMessage(Messages.NextMove);
                 string consoleInputLine = Console.ReadLine();
                 controller.Invoke(consoleInputLine);
             }

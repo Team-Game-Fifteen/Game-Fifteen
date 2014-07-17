@@ -25,7 +25,7 @@
         public void Execute(params object[] list)
         {
             this.game.SaveState();
-            ConsoleWriter.PrintStateSaved();
+            ConsoleWriter.PrintMessage(Messages.SaveState);
         }
     }
 }

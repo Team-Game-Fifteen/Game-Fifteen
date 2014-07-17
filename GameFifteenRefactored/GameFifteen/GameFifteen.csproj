@@ -52,6 +52,7 @@
     <Compile Include="ManageInput\Restore.cs" />
     <Compile Include="ManageInput\Save.cs" />
     <Compile Include="ManageInput\Top.cs" />
+    <Compile Include="Messages.cs" />
     <Compile Include="MovePerformedEventArgs.cs" />
     <Compile Include="PersonalScore.cs" />
     <Compile Include="GameFifteenEngine.cs" />

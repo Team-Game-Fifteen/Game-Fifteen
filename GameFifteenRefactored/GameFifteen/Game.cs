@@ -62,7 +62,7 @@
         {
             if (this.SavedStates.Count == 0)
             {
-                ConsoleWriter.PrintNoSavedStateMessage();
+                ConsoleWriter.PrintMessage(Messages.NoStateToRestore);
             }
             else
             {

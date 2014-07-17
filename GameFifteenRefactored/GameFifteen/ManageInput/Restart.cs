@@ -25,7 +25,7 @@
         public void Execute(params object[] list)
         {
             this.game.Restart();
-            ConsoleWriter.PrintWelcomeMessage();
+            ConsoleWriter.PrintMessage(Messages.Welcome);
             ConsoleWriter.PrintMatrix(this.game.Board);
         }
     }

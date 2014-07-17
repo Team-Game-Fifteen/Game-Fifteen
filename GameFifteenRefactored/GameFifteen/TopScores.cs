@@ -17,7 +17,7 @@
         public static void UpgradeTopScore(Game game)
         {
             string[] topScores = GetTopScoresFromFile();
-            Console.Write("Please enter your name for the top scoreboard: ");
+            ConsoleWriter.PrintMessage(Messages.TopScoreName);
             string name = Console.ReadLine();
 
             topScores[TOP_SCORES_AMOUNT] = string.Format("0. {0} --> {1} move", name, game.Turn);
