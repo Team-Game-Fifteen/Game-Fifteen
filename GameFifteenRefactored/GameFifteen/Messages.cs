@@ -9,8 +9,7 @@
     {
         public const string NextMove = " Enter a number to move: ";
         public const string TopScoreName = " Please enter your name for the top scoreboard: ";
-        public const string TheEnd = " Goodbye!";
-
+        
         public static string Welcome()
         {
             return string.Format(" Welcome to the game \"15\". {0}" +
@@ -62,6 +61,11 @@
         public static string NoTopScoreAchieved(int score)
         {
             return string.Format(" You couldn't get in the top {0} scoreboard.", score);
+        }
+
+        public static string TheEnd()
+        {
+            return string.Format(" Goodbye!{0}", Environment.NewLine);
         }
     }
 }
