@@ -1,4 +1,4 @@
-﻿namespace GameFifteen.ManageInput
+﻿namespace GameFifteen.Interfaces
 {
     using System;
     using System.Linq;

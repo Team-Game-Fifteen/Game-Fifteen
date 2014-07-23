@@ -7,8 +7,8 @@
     /// </summary>
     public static class Messages
     {
-        public const string NextMove = " Enter a number to move: ";
-        public const string TopScoreName = " Please enter your name for the top scoreboard: ";
+        public const string NEXT_MOVE = " Enter a number to move: ";
+        public const string TOP_SCORE_NAME = " Please enter your name for the top scoreboard: ";
         
         public static string Welcome()
         {

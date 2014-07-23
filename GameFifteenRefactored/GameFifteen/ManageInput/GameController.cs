@@ -3,6 +3,7 @@
     using System;
     using System.Collections.Generic;
     using System.Linq;
+    using Interfaces;
 
     /// <summary>
     /// Class used for command handling.

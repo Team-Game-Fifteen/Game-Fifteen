@@ -2,6 +2,7 @@
 {
     using System;
     using System.Linq;
+    using Interfaces;
 
     /// <summary>
     /// Saves the game state.

@@ -17,7 +17,7 @@
         public static void UpgradeTopScore(Game game)
         {
             string[] topScores = GetTopScoresFromFile();
-            ConsoleWriter.PrintMessage(Messages.TopScoreName);
+            ConsoleWriter.PrintMessage(Messages.TOP_SCORE_NAME);
             string name = Console.ReadLine();
 
             topScores[TOP_SCORES_AMOUNT] = string.Format("0. {0} --> {1} move", name, game.Turn);

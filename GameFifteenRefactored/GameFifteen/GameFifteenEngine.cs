@@ -31,7 +31,7 @@
 
             while (!game.IsFinished)
             {
-                ConsoleWriter.PrintMessage(Messages.NextMove);
+                ConsoleWriter.PrintMessage(Messages.NEXT_MOVE);
                 string consoleInputLine = Console.ReadLine();
                 controller.Invoke(consoleInputLine);
             }
