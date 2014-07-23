@@ -4,7 +4,6 @@
     using System.Linq;
     using Interfaces;
 
-
     /// <summary>
     /// Enables game turn.
     /// </summary>
