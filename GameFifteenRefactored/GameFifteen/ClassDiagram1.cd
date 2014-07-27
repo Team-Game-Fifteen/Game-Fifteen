@@ -1,51 +1,52 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
   <Class Name="GameFifteen.TopScores">
-    <Position X="5.75" Y="3.5" Width="2.5" />
+    <Position X="6" Y="3.5" Width="2.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAiAAAAQAAAAAAAAAQgIAAAAAAAAA=</HashCode>
+      <HashCode>AEAAAAAAAAAAAAAAiAAAEQAACAAAAAAAgAAAAAAAAAA=</HashCode>
       <FileName>TopScores.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="GameFifteen.State">
-    <Position X="8.25" Y="0.5" Width="2.25" />
+    <Position X="8.75" Y="0.5" Width="2.25" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAACIAAAAAAkAAAAAAAAAAAAAAA=</HashCode>
       <FileName>State.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="GameFifteen.ConsoleWriter">
-    <Position X="6" Y="0.5" Width="2" />
+    <Position X="6.5" Y="0.5" Width="2" />
     <TypeIdentifier>
-      <HashCode>AAEASAAACIAAAAAAAAAAAAAABgAIAAAABQAAAAAIAAA=</HashCode>
+      <HashCode>AAAAQAAAAAAAAAAAAAAAAAAAAAAIQAAABAAAAAAAAAA=</HashCode>
       <FileName>ConsoleWriter.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="GameFifteen.Game">
-    <Position X="4" Y="2" Width="1.5" />
+    <Position X="4.25" Y="2" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AoAAAAAAAAAAAAAAAAACAAAAAAAQgAAAAEAAACAAAAA=</HashCode>
+      <HashCode>EoAAAAAAAAAAAAAAAAACEAAAAAAQgAAAREAAACAAAAA=</HashCode>
       <FileName>Game.cs</FileName>
     </TypeIdentifier>
+    <Lollipop Position="0.2" />
   </Class>
   <Class Name="GameFifteen.GameFifteenEngine">
-    <Position X="4" Y="0.5" Width="1.5" />
+    <Position X="4.25" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
       <FileName>GameFifteenEngine.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="GameFifteen.MovePerformedEventArgs">
-    <Position X="8.5" Y="3" Width="2.25" />
+    <Position X="8.75" Y="3" Width="2.25" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>MovePerformedEventArgs.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="GameFifteen.Board">
-    <Position X="2" Y="0.5" Width="1.75" />
+    <Position X="2.25" Y="0.5" Width="1.75" />
     <TypeIdentifier>
-      <HashCode>AAAgQAKAAAUAAAAACAQEIAEQAgAkAAgAZAQAAAAAAEA=</HashCode>
+      <HashCode>AAAgQAKAAAUABABACAAEIAAAAAAkAAAAZAQAAAACAkA=</HashCode>
       <FileName>Board.cs</FileName>
     </TypeIdentifier>
   </Class>
